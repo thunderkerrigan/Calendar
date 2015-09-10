@@ -8,6 +8,7 @@
 
 #import "CPLParser.h"
 
+
 @implementation CPLParser
 
 + (void)parseData:(NSData *)data
@@ -15,6 +16,9 @@
         onFailure:(ParserOnFailure)failure {
     // on parse l'objet data
     BOOL __parserDidFail = NO;
+    
+    
+    
     // Quelque chose a fait échouer le parsing
     if(__parserDidFail) {
         // On vérifie que lors de l'appel de la méthode, un paramètre "failure" a été renseigné

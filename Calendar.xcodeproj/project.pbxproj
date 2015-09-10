@@ -41,6 +41,7 @@
 		7C870B361BA17FC000EB26CE /* mySQLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B351BA17FC000EB26CE /* mySQLQuery.m */; settings = {ASSET_TAGS = (); }; };
 		7C870B391BA1809400EB26CE /* mySQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B381BA1809400EB26CE /* mySQLManager.m */; settings = {ASSET_TAGS = (); }; };
 		7C870B3D1BA1B30900EB26CE /* CPLs+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B3C1BA1B30900EB26CE /* CPLs+Provider.m */; settings = {ASSET_TAGS = (); }; };
+		7C9922421BA1C80900ECE6CB /* Program+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9922411BA1C80900ECE6CB /* Program+Provider.m */; settings = {ASSET_TAGS = (); }; };
 		B8B620ACAD2CA652FEF2E8A4 /* libPods-Calendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551320415CF1558762DC0697 /* libPods-Calendar.a */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,8 @@
 		7C870B3A1BA18EB100EB26CE /* Calendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Calendar.entitlements; sourceTree = "<group>"; };
 		7C870B3B1BA1B30900EB26CE /* CPLs+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPLs+Provider.h"; sourceTree = "<group>"; };
 		7C870B3C1BA1B30900EB26CE /* CPLs+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPLs+Provider.m"; sourceTree = "<group>"; };
+		7C9922401BA1C80900ECE6CB /* Program+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Program+Provider.h"; sourceTree = "<group>"; };
+		7C9922411BA1C80900ECE6CB /* Program+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Program+Provider.m"; sourceTree = "<group>"; };
 		7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,6 +361,8 @@
 			children = (
 				7C870B3B1BA1B30900EB26CE /* CPLs+Provider.h */,
 				7C870B3C1BA1B30900EB26CE /* CPLs+Provider.m */,
+				7C9922401BA1C80900ECE6CB /* Program+Provider.h */,
+				7C9922411BA1C80900ECE6CB /* Program+Provider.m */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -596,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C686E371BA05B260063C8E3 /* Programs.m in Sources */,
+				7C9922421BA1C80900ECE6CB /* Program+Provider.m in Sources */,
 				7C686E541BA079CD0063C8E3 /* BaseParser.m in Sources */,
 				7C686E0E1BA020050063C8E3 /* AppDelegate.m in Sources */,
 				7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */,

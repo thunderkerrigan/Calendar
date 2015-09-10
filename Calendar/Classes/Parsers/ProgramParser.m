@@ -8,6 +8,8 @@
 
 #import "ProgramParser.h"
 #import "mySQLConnect.h"
+#import "Program+Provider.h"
+#import "Programs+CoreDataProperties.h"
 
 
 
@@ -43,9 +45,20 @@
         onFailure:(ParserOnFailure)failure {
     // on parse l'objet array
     BOOL __parserDidFail = NO;
-    for (int i = 0; i > [array count]; i++) {
-        NSLog(@"object : %@", array[i]);
-//        XMLProgram = [[NSXMLDocument alloc] initWithXMLString:[[array objectAtIndex:0] objectAtIndex:0] options:0 error:nil];
+    for (NSMutableArray *rowArray in array) {
+        NSLog(@"object : %@", rowArray);
+        Programs *program = [Program_Provider getOrCreateCPLWithID:rowArray[0]];
+        [program setTitle:rowArray[1]];
+        [program setTitle:rowArray[1]];
+        [program setXml:rowArray[2]];
+        [program setIdCPL:rowArray[3]];
+        [program setSoundLevelCPL:rowArray[4]];
+        [program setCreditPositionCPL:rowArray[5]];
+        [program setTemplate_identifier:rowArray[6]];
+        [program setTemplate:rowArray[7]];
+//        [program setLastUpdate:rowArray[8]];
+        [Program_Provider saveContext];
+        //        XMLProgram = [[NSXMLDocument alloc] initWithXMLString:[[array objectAtIndex:0] objectAtIndex:0] options:0 error:nil];
     }
 
     // Quelque chose a fait échouer le parsing

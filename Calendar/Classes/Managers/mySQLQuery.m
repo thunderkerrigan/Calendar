@@ -26,6 +26,7 @@
 {
     NSLog(@"begin executing query");
     [rowsArray removeAllObjects];
+    NSMutableArray *rowArray = [[NSMutableArray alloc] init];
     num_fields = 0;
     if(mysql_query(db.mysql, sql.UTF8String))
         [db mysqlError];
@@ -34,13 +35,18 @@
         num_fields = mysql_num_fields(res);
         MYSQL_ROW row;
         while ((row = mysql_fetch_row(res))){
+            [rowArray removeAllObjects];
             for(NSInteger i=0;i<num_fields;i++){
                 if (row[i]) {
-                    NSLog(@" field in %d --> %@", i , [NSString stringWithUTF8String:row[i]]);
+                    NSLog(@"\n///\n///\nfield in %d --> %@\n", i , [NSString stringWithUTF8String:row[i]]);
                     NSString* sField = [NSString stringWithUTF8String:row[i]];
-                    [rowsArray addObject:sField];
+                    [rowArray addObject:sField];
+                }
+                else{
+                    [rowArray addObject:@""];
                 }
             }
+            [rowsArray addObject:[rowArray copy]];
         }
         
         mysql_free_result(res);

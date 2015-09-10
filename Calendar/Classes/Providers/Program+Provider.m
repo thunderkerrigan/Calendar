@@ -1,20 +1,16 @@
 //
-//  CPLs+Provider.m
+//  Program+Provider.m
 //  Calendar
 //
 //  Created by Joseph on 10/09/2015.
 //  Copyright © 2015 ADDE. All rights reserved.
 //
 
-#import "CPLs+Provider.h"
-#import "CPLs+CoreDataProperties.h"
+#import "Program+Provider.h"
+#import "Programs+CoreDataProperties.h"
 #import "AppDelegate.h"
 
-@interface CPLs_Provider ()
-
-@end
-
-@implementation CPLs_Provider
+@implementation Program_Provider
 
 #pragma mark - CoreData
 
@@ -22,6 +18,7 @@
 {
     return ((AppDelegate*)[NSApp delegate]).managedObjectContext;
 }
+
 + (BOOL)saveContext {
     NSManagedObjectContext *__moc = [[self class] managedObjectContext];
     if([__moc hasChanges]) {
@@ -32,24 +29,24 @@
     return YES; }
 #pragma mark - Create Methods
 
-+ (CPLs *)createCPLWithID:(NSString *)stringID {
-    return (CPLs *)[NSEntityDescription insertNewObjectForEntityForName:@"CPLs" inManagedObjectContext:[self managedObjectContext]];
++ (Programs *)createProgramsWithID:(NSString *)stringID {
+    return (Programs *)[NSEntityDescription insertNewObjectForEntityForName:@"Programs" inManagedObjectContext:[self managedObjectContext]];
 }
 
-+ (CPLs *)getOrCreateCPLWithID:(NSString *)stringID {
++ (Programs *)getOrCreateCPLWithID:(NSString *)stringID {
     NSArray *fetchedObjects;
     NSManagedObjectContext *context = [[self class] managedObjectContext];
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"CPLs"  inManagedObjectContext: context];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Programs"  inManagedObjectContext: context];
     [fetch setEntity:entityDescription];
-    [fetch setPredicate:[NSPredicate predicateWithFormat:@"idCPL contains[cd] %@)",stringID]];
+    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(idProgram MATCHES %@)",stringID]];
     NSError * error = nil;
     fetchedObjects = [context executeFetchRequest:fetch error:&error];
     
     if([fetchedObjects count] == 1)
         return [fetchedObjects firstObject];
     else
-        return [[self class] createCPLWithID:stringID];
+        return [[self class] createProgramsWithID:stringID];
 }
 
 #pragma mark - Get Methods
@@ -69,16 +66,16 @@
 
 #pragma mark - Delete Methods
 
-+ (BOOL) deleteCPL:(CPLs *)cpl {
++ (BOOL) deleteProgram:(Programs *)program {
     NSManagedObjectContext *context = [[self class] managedObjectContext];
-    [context deleteObject:cpl];
+    [context deleteObject:program];
     return [[self class] saveContext];
 }
 + (BOOL)deleteAll {
     NSManagedObjectContext *__moc = [self managedObjectContext];
-    NSArray *__allCPLs = [[self class] getAll];
-    [__allCPLs enumerateObjectsUsingBlock:^(CPLs *cpl, NSUInteger idx, BOOL *stop) {
-        [__moc deleteObject:cpl];
+    NSArray *__allPrograms = [[self class] getAll];
+    [__allPrograms enumerateObjectsUsingBlock:^(Programs *program, NSUInteger idx, BOOL *stop) {
+        [__moc deleteObject:program];
     }];
     return [[self class] saveContext];
 }
