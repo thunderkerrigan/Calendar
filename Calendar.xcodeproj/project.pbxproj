@@ -11,12 +11,34 @@
 		7C16A41C1B9F195600429261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16A41B1B9F195600429261 /* main.m */; };
 		7C16A4321B9F195700429261 /* CalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16A4311B9F195700429261 /* CalendarTests.m */; };
 		7C16A43D1B9F195700429261 /* CalendarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16A43C1B9F195700429261 /* CalendarUITests.m */; };
-		7C686DF51BA01EBA0063C8E3 /* Calendar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C686DEF1BA01EBA0063C8E3 /* Calendar-Info.plist */; settings = {ASSET_TAGS = (); }; };
-		7C686E0E1BA020050063C8E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686DFF1BA020050063C8E3 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		7C686E0F1BA020050063C8E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E0C1BA020050063C8E3 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7C686E121BA020370063C8E3 /* CalendarModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E101BA020370063C8E3 /* CalendarModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		7C686E181BA0229C0063C8E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C686E141BA0229C0063C8E3 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		7C686E191BA0229C0063C8E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C686E171BA0229C0063C8E3 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		7C686DF51BA01EBA0063C8E3 /* Calendar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C686DEF1BA01EBA0063C8E3 /* Calendar-Info.plist */; };
+		7C686E0E1BA020050063C8E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686DFF1BA020050063C8E3 /* AppDelegate.m */; };
+		7C686E0F1BA020050063C8E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E0C1BA020050063C8E3 /* ViewController.m */; };
+		7C686E121BA020370063C8E3 /* CalendarModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E101BA020370063C8E3 /* CalendarModel.xcdatamodeld */; };
+		7C686E181BA0229C0063C8E3 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C686E141BA0229C0063C8E3 /* Calendar.storyboard */; };
+		7C686E191BA0229C0063C8E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C686E171BA0229C0063C8E3 /* Images.xcassets */; };
+		7C686E321BA05B260063C8E3 /* Calendar+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E1B1BA05B250063C8E3 /* Calendar+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E331BA05B260063C8E3 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E1D1BA05B250063C8E3 /* Calendar.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E341BA05B260063C8E3 /* CPLs+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E1F1BA05B250063C8E3 /* CPLs+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E351BA05B260063C8E3 /* CPLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E211BA05B250063C8E3 /* CPLs.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E361BA05B260063C8E3 /* Programs+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E231BA05B250063C8E3 /* Programs+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E371BA05B260063C8E3 /* Programs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E251BA05B250063C8E3 /* Programs.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E381BA05B260063C8E3 /* KDMs+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E271BA05B250063C8E3 /* KDMs+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E391BA05B260063C8E3 /* KDMs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E291BA05B260063C8E3 /* KDMs.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E3A1BA05B260063C8E3 /* FirstParts+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E2B1BA05B260063C8E3 /* FirstParts+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E3B1BA05B260063C8E3 /* FirstParts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E2D1BA05B260063C8E3 /* FirstParts.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E3C1BA05B260063C8E3 /* Ingest+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E2F1BA05B260063C8E3 /* Ingest+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E3D1BA05B260063C8E3 /* Ingest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E311BA05B260063C8E3 /* Ingest.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E401BA05C140063C8E3 /* CPLService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E3F1BA05C140063C8E3 /* CPLService.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E431BA05DD30063C8E3 /* CPLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E421BA05DD30063C8E3 /* CPLParser.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E461BA064F00063C8E3 /* mySQLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E451BA064F00063C8E3 /* mySQLController.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E481BA06F270063C8E3 /* MCPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C686E471BA06F270063C8E3 /* MCPKit.framework */; settings = {ASSET_TAGS = (); }; };
+		7C686E4B1BA078280063C8E3 /* ProgramService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E4A1BA078280063C8E3 /* ProgramService.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E4D1BA078AB0063C8E3 /* BaseService.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E511BA079B80063C8E3 /* ProgramParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E501BA079B80063C8E3 /* ProgramParser.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E541BA079CD0063C8E3 /* BaseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E531BA079CD0063C8E3 /* BaseParser.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E571BA090690063C8E3 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E561BA090690063C8E3 /* CoreDataManager.m */; settings = {ASSET_TAGS = (); }; };
+		B8B620ACAD2CA652FEF2E8A4 /* libPods-Calendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551320415CF1558762DC0697 /* libPods-Calendar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		42CEB411344D618F6D85DFEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3AD5E07CE6A6B2E2BC22E192 /* Pods-Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.debug.xcconfig"; sourceTree = "<group>"; };
+		551320415CF1558762DC0697 /* libPods-Calendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Calendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF42276CEEC8A52BC876732 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C16A4141B9F195600429261 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C16A41B1B9F195600429261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,9 +77,50 @@
 		7C686E0B1BA020050063C8E3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7C686E0C1BA020050063C8E3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7C686E111BA020370063C8E3 /* CalendarModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalendarModel.xcdatamodel; sourceTree = "<group>"; };
-		7C686E151BA0229C0063C8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C686E151BA0229C0063C8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calendar.storyboard; sourceTree = "<group>"; };
 		7C686E171BA0229C0063C8E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9D0926925B45AF18A996D8DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7C686E1A1BA05B250063C8E3 /* Calendar+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Calendar+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7C686E1B1BA05B250063C8E3 /* Calendar+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Calendar+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7C686E1C1BA05B250063C8E3 /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
+		7C686E1D1BA05B250063C8E3 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
+		7C686E1E1BA05B250063C8E3 /* CPLs+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPLs+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7C686E1F1BA05B250063C8E3 /* CPLs+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPLs+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7C686E201BA05B250063C8E3 /* CPLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLs.h; sourceTree = "<group>"; };
+		7C686E211BA05B250063C8E3 /* CPLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLs.m; sourceTree = "<group>"; };
+		7C686E221BA05B250063C8E3 /* Programs+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Programs+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7C686E231BA05B250063C8E3 /* Programs+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Programs+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7C686E241BA05B250063C8E3 /* Programs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Programs.h; sourceTree = "<group>"; };
+		7C686E251BA05B250063C8E3 /* Programs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Programs.m; sourceTree = "<group>"; };
+		7C686E261BA05B250063C8E3 /* KDMs+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KDMs+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7C686E271BA05B250063C8E3 /* KDMs+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KDMs+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7C686E281BA05B250063C8E3 /* KDMs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDMs.h; sourceTree = "<group>"; };
+		7C686E291BA05B260063C8E3 /* KDMs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDMs.m; sourceTree = "<group>"; };
+		7C686E2A1BA05B260063C8E3 /* FirstParts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FirstParts+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7C686E2B1BA05B260063C8E3 /* FirstParts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FirstParts+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7C686E2C1BA05B260063C8E3 /* FirstParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstParts.h; sourceTree = "<group>"; };
+		7C686E2D1BA05B260063C8E3 /* FirstParts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstParts.m; sourceTree = "<group>"; };
+		7C686E2E1BA05B260063C8E3 /* Ingest+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ingest+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7C686E2F1BA05B260063C8E3 /* Ingest+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ingest+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7C686E301BA05B260063C8E3 /* Ingest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingest.h; sourceTree = "<group>"; };
+		7C686E311BA05B260063C8E3 /* Ingest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingest.m; sourceTree = "<group>"; };
+		7C686E3E1BA05C140063C8E3 /* CPLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLService.h; sourceTree = "<group>"; };
+		7C686E3F1BA05C140063C8E3 /* CPLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLService.m; sourceTree = "<group>"; };
+		7C686E411BA05DD30063C8E3 /* CPLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLParser.h; sourceTree = "<group>"; };
+		7C686E421BA05DD30063C8E3 /* CPLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLParser.m; sourceTree = "<group>"; };
+		7C686E441BA064F00063C8E3 /* mySQLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mySQLController.h; path = ../Services/mySQLController.h; sourceTree = "<group>"; };
+		7C686E451BA064F00063C8E3 /* mySQLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mySQLController.m; path = ../Services/mySQLController.m; sourceTree = "<group>"; };
+		7C686E471BA06F270063C8E3 /* MCPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MCPKit.framework; sourceTree = "<group>"; };
+		7C686E491BA078280063C8E3 /* ProgramService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramService.h; sourceTree = "<group>"; };
+		7C686E4A1BA078280063C8E3 /* ProgramService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramService.m; sourceTree = "<group>"; };
+		7C686E4C1BA078AB0063C8E3 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		7C686E4D1BA078AB0063C8E3 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		7C686E4F1BA079B80063C8E3 /* ProgramParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramParser.h; sourceTree = "<group>"; };
+		7C686E501BA079B80063C8E3 /* ProgramParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramParser.m; sourceTree = "<group>"; };
+		7C686E521BA079CD0063C8E3 /* BaseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseParser.h; sourceTree = "<group>"; };
+		7C686E531BA079CD0063C8E3 /* BaseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseParser.m; sourceTree = "<group>"; };
+		7C686E551BA090690063C8E3 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		7C686E561BA090690063C8E3 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E410D81BBA302D40FCC7FFA /* libPods.a in Frameworks */,
+				7C686E481BA06F270063C8E3 /* MCPKit.framework in Frameworks */,
+				B8B620ACAD2CA652FEF2E8A4 /* libPods-Calendar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +154,8 @@
 		1FAB9143FA637F57F31F0BA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				42CEB411344D618F6D85DFEB /* Pods.debug.xcconfig */,
-				9D0926925B45AF18A996D8DB /* Pods.release.xcconfig */,
+				3AD5E07CE6A6B2E2BC22E192 /* Pods-Calendar.debug.xcconfig */,
+				7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -97,7 +163,9 @@
 		488789A32FB46A102CBC1C48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C686E471BA06F270063C8E3 /* MCPKit.framework */,
 				6DF42276CEEC8A52BC876732 /* libPods.a */,
+				551320415CF1558762DC0697 /* libPods-Calendar.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,10 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				7C16A4161B9F195600429261 /* Calendar */,
+				1FAB9143FA637F57F31F0BA2 /* Pods */,
 				7C16A4301B9F195700429261 /* CalendarTests */,
 				7C16A43B1B9F195700429261 /* CalendarUITests */,
 				7C16A4151B9F195600429261 /* Products */,
-				1FAB9143FA637F57F31F0BA2 /* Pods */,
 				488789A32FB46A102CBC1C48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -190,6 +258,8 @@
 		7C686E011BA020050063C8E3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7C686E551BA090690063C8E3 /* CoreDataManager.h */,
+				7C686E561BA090690063C8E3 /* CoreDataManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -214,6 +284,30 @@
 		7C686E041BA020050063C8E3 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				7C686E1A1BA05B250063C8E3 /* Calendar+CoreDataProperties.h */,
+				7C686E1B1BA05B250063C8E3 /* Calendar+CoreDataProperties.m */,
+				7C686E1C1BA05B250063C8E3 /* Calendar.h */,
+				7C686E1D1BA05B250063C8E3 /* Calendar.m */,
+				7C686E1E1BA05B250063C8E3 /* CPLs+CoreDataProperties.h */,
+				7C686E1F1BA05B250063C8E3 /* CPLs+CoreDataProperties.m */,
+				7C686E201BA05B250063C8E3 /* CPLs.h */,
+				7C686E211BA05B250063C8E3 /* CPLs.m */,
+				7C686E221BA05B250063C8E3 /* Programs+CoreDataProperties.h */,
+				7C686E231BA05B250063C8E3 /* Programs+CoreDataProperties.m */,
+				7C686E241BA05B250063C8E3 /* Programs.h */,
+				7C686E251BA05B250063C8E3 /* Programs.m */,
+				7C686E261BA05B250063C8E3 /* KDMs+CoreDataProperties.h */,
+				7C686E271BA05B250063C8E3 /* KDMs+CoreDataProperties.m */,
+				7C686E281BA05B250063C8E3 /* KDMs.h */,
+				7C686E291BA05B260063C8E3 /* KDMs.m */,
+				7C686E2A1BA05B260063C8E3 /* FirstParts+CoreDataProperties.h */,
+				7C686E2B1BA05B260063C8E3 /* FirstParts+CoreDataProperties.m */,
+				7C686E2C1BA05B260063C8E3 /* FirstParts.h */,
+				7C686E2D1BA05B260063C8E3 /* FirstParts.m */,
+				7C686E2E1BA05B260063C8E3 /* Ingest+CoreDataProperties.h */,
+				7C686E2F1BA05B260063C8E3 /* Ingest+CoreDataProperties.m */,
+				7C686E301BA05B260063C8E3 /* Ingest.h */,
+				7C686E311BA05B260063C8E3 /* Ingest.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -221,6 +315,12 @@
 		7C686E051BA020050063C8E3 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				7C686E521BA079CD0063C8E3 /* BaseParser.h */,
+				7C686E531BA079CD0063C8E3 /* BaseParser.m */,
+				7C686E411BA05DD30063C8E3 /* CPLParser.h */,
+				7C686E421BA05DD30063C8E3 /* CPLParser.m */,
+				7C686E4F1BA079B80063C8E3 /* ProgramParser.h */,
+				7C686E501BA079B80063C8E3 /* ProgramParser.m */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -235,6 +335,12 @@
 		7C686E071BA020050063C8E3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7C686E4C1BA078AB0063C8E3 /* BaseService.h */,
+				7C686E4D1BA078AB0063C8E3 /* BaseService.m */,
+				7C686E3E1BA05C140063C8E3 /* CPLService.h */,
+				7C686E3F1BA05C140063C8E3 /* CPLService.m */,
+				7C686E491BA078280063C8E3 /* ProgramService.h */,
+				7C686E4A1BA078280063C8E3 /* ProgramService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,6 +348,8 @@
 		7C686E081BA020050063C8E3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7C686E441BA064F00063C8E3 /* mySQLController.h */,
+				7C686E451BA064F00063C8E3 /* mySQLController.m */,
 				7C686E091BA020050063C8E3 /* Categories */,
 			);
 			path = Tools;
@@ -273,7 +381,7 @@
 		7C686E131BA0229C0063C8E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7C686E141BA0229C0063C8E3 /* Main.storyboard */,
+				7C686E141BA0229C0063C8E3 /* Calendar.storyboard */,
 				7C686E161BA0229C0063C8E3 /* Images */,
 				7C686E171BA0229C0063C8E3 /* Images.xcassets */,
 			);
@@ -394,7 +502,7 @@
 			files = (
 				7C686E191BA0229C0063C8E3 /* Images.xcassets in Resources */,
 				7C686DF51BA01EBA0063C8E3 /* Calendar-Info.plist in Resources */,
-				7C686E181BA0229C0063C8E3 /* Main.storyboard in Resources */,
+				7C686E181BA0229C0063C8E3 /* Calendar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +550,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calendar/Pods-Calendar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -452,10 +560,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C686E371BA05B260063C8E3 /* Programs.m in Sources */,
+				7C686E541BA079CD0063C8E3 /* BaseParser.m in Sources */,
 				7C686E0E1BA020050063C8E3 /* AppDelegate.m in Sources */,
+				7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */,
+				7C686E431BA05DD30063C8E3 /* CPLParser.m in Sources */,
+				7C686E361BA05B260063C8E3 /* Programs+CoreDataProperties.m in Sources */,
+				7C686E3A1BA05B260063C8E3 /* FirstParts+CoreDataProperties.m in Sources */,
 				7C686E121BA020370063C8E3 /* CalendarModel.xcdatamodeld in Sources */,
+				7C686E321BA05B260063C8E3 /* Calendar+CoreDataProperties.m in Sources */,
+				7C686E351BA05B260063C8E3 /* CPLs.m in Sources */,
+				7C686E3B1BA05B260063C8E3 /* FirstParts.m in Sources */,
+				7C686E461BA064F00063C8E3 /* mySQLController.m in Sources */,
+				7C686E511BA079B80063C8E3 /* ProgramParser.m in Sources */,
+				7C686E341BA05B260063C8E3 /* CPLs+CoreDataProperties.m in Sources */,
+				7C686E331BA05B260063C8E3 /* Calendar.m in Sources */,
+				7C686E4B1BA078280063C8E3 /* ProgramService.m in Sources */,
+				7C686E391BA05B260063C8E3 /* KDMs.m in Sources */,
 				7C16A41C1B9F195600429261 /* main.m in Sources */,
+				7C686E571BA090690063C8E3 /* CoreDataManager.m in Sources */,
+				7C686E381BA05B260063C8E3 /* KDMs+CoreDataProperties.m in Sources */,
+				7C686E3D1BA05B260063C8E3 /* Ingest.m in Sources */,
+				7C686E3C1BA05B260063C8E3 /* Ingest+CoreDataProperties.m in Sources */,
 				7C686E0F1BA020050063C8E3 /* ViewController.m in Sources */,
+				7C686E401BA05C140063C8E3 /* CPLService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,12 +619,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7C686E141BA0229C0063C8E3 /* Main.storyboard */ = {
+		7C686E141BA0229C0063C8E3 /* Calendar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7C686E151BA0229C0063C8E3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Calendar.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -583,9 +711,13 @@
 		};
 		7C16A4421B9F195700429261 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42CEB411344D618F6D85DFEB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 3AD5E07CE6A6B2E2BC22E192 /* Pods-Calendar.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ADDE.Calendar;
@@ -595,9 +727,13 @@
 		};
 		7C16A4431B9F195700429261 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D0926925B45AF18A996D8DB /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ADDE.Calendar;

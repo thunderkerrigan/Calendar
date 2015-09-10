@@ -1,4 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="15A279b" minimumToolsVersion="Xcode 7.0">
-    <elements/>
+    <entity name="Calendar" representedClassName="Calendar" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="featureID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idCalendar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idCPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idSPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="programTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="calendarToCPL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPLs" syncable="YES"/>
+    </entity>
+    <entity name="CPLs" representedClassName="CPLs" syncable="YES">
+        <attribute name="archive" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cryptoKeyID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="editRate_a" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="editRate_b" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="idCPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ingesting" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="originalVersionID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="originalVersionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureEncoding" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="pictureEncryption" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="pictureHeight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="pictureWidth" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sevenOneVersionID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="sevenOneVersionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="soundChannel" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="soundEncoding" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="soundEncryption" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="soundQuantizationBits" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="stored" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validationCheckFiles" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validationCheckSize" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validationFiles" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validationSize" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FirstParts" representedClassName="FirstParts" syncable="YES">
+        <attribute name="compositionPlaylistID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idSPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is3D" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is71" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="scope" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showPlaylistNotValidAfter" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="showPlaylistNotValidBefore" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="showTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Ingest" representedClassName="Ingest" syncable="YES">
+        <attribute name="contentID" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="contentTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destinationID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idIngest" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="issuer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="neededTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="scheduleTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sourceID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="KDMs" representedClassName="KDMs" syncable="YES"/>
+    <entity name="Programs" representedClassName="Programs" syncable="YES">
+        <attribute name="creditPositionCPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idCPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idProgram" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="soundLevelCPL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="template" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="template_identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xml" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Calendar" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="Ingest" positionX="-54" positionY="63" width="128" height="210"/>
+        <element name="Programs" positionX="-36" positionY="126" width="128" height="180"/>
+        <element name="CPLs" positionX="-18" positionY="153" width="128" height="480"/>
+        <element name="KDMs" positionX="9" positionY="171" width="128" height="45"/>
+        <element name="FirstParts" positionX="27" positionY="180" width="128" height="210"/>
+    </elements>
 </model>
