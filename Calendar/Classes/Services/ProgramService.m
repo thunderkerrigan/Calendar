@@ -7,7 +7,7 @@
 //
 
 #import "ProgramService.h"
-#import "mySQLController.h"
+#import "mySQLManager.h"
 #import "ProgramParser.h"
 
 @implementation ProgramService
@@ -20,27 +20,34 @@
     // ou à la main avec NSURLConnection si on est un warrior
     // On parse notre objet Data
     NSString *requestType = @"select * from Programs where XML is not null and `Template` = b'0';";
-    NSMutableArray *programArray = [[mySQLController sharedController] TableFromQueryString:requestType];
-    [ProgramParser parseArray:programArray
-             doOnSuccess:^{
-                 // Tout s'est bien passé
-                 // On vérifie que lors de l'appel de la méthode, un paramètre "success" a été renseigné
-                 if(success) {
-                     // le paramètre existe, on exécute le block qui traite le succès
-                     success();
-                 }
-             } onFailure:^{
-                 // Au contraire, il y a eu une erreur
-                 // On vérifie que lors de l'appel de la méthode, un paramètre "failure" a été renseigné
-                 if(failure)
-                 {
-                     // le paramètre existe, on exécute le block qui traite l'échec la signature du block:
-                     // on lui passe les paramètres tels que défini dans // typedef void (^ServiceGetUsersOnFailure)(int errorCode, NSDictionary *errorMessages);
-                     int __errorCode = 18;
-                     NSDictionary *__errorMessages = @{ @"public_message": @"Une erreur s'est produite.",
-                                                        @"technical_message": @"La requête a expiré." }; failure(__errorCode, __errorMessages);
-                 }
-             }];
+    NSLog(@"before call");
+    [[mySQLManager sharedManager] tableFromQueryString:requestType doOnSuccess:^{
+        NSMutableArray *resultArray = [[mySQLManager sharedManager] getResultArrayFromPreviousRequest];
+        [ProgramParser parseArray:resultArray
+                      doOnSuccess:^{
+                          // Tout s'est bien passé
+                          // On vérifie que lors de l'appel de la méthode, un paramètre "success" a été renseigné
+                          if(success) {
+                              // le paramètre existe, on exécute le block qui traite le succès
+                              success();
+                          }
+                      } onFailure:^{
+                          // Au contraire, il y a eu une erreur
+                          // On vérifie que lors de l'appel de la méthode, un paramètre "failure" a été renseigné
+                          if(failure)
+                          {
+                              // le paramètre existe, on exécute le block qui traite l'échec la signature du block:
+                              // on lui passe les paramètres tels que défini dans // typedef void (^ServiceGetUsersOnFailure)(int errorCode, NSDictionary *errorMessages);
+                              int __errorCode = 18;
+                              NSDictionary *__errorMessages = @{ @"public_message": @"Une erreur s'est produite.",
+                                                                 @"technical_message": @"La requête a expiré." }; failure(__errorCode, __errorMessages);
+                          }
+                      }];
+
+    } onFailure:^(NSString *errorMessages) {
+        NSLog(@"ERROR : %@", errorMessages);
+    }];
+    NSLog(@"After call");
 }
 
 @end

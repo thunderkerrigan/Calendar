@@ -7,7 +7,9 @@
 //
 
 #import "ProgramParser.h"
-#import "mySQLController.h"
+#import "mySQLConnect.h"
+
+
 
 
 @implementation ProgramParser
@@ -41,8 +43,9 @@
         onFailure:(ParserOnFailure)failure {
     // on parse l'objet array
     BOOL __parserDidFail = NO;
-    for (int i = 0; i > anArrayCount; i++) {
-        XMLProgram = [[NSXMLDocument alloc] initWithXMLString:[[array objectAtIndex:0] objectAtIndex:0] options:0 error:nil];
+    for (int i = 0; i > [array count]; i++) {
+        NSLog(@"object : %@", array[i]);
+//        XMLProgram = [[NSXMLDocument alloc] initWithXMLString:[[array objectAtIndex:0] objectAtIndex:0] options:0 error:nil];
     }
 
     // Quelque chose a fait échouer le parsing

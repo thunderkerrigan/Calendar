@@ -7,8 +7,7 @@
 //
 
 #import "CoreDataManager.h"
-
-#define kPROJECTNAME "Calendar"
+#import "Constants.h"
 
 @interface CoreDataManager ()
 
@@ -56,7 +55,7 @@ static CoreDataManager *coreDataManager;
     
     NSURL *documentDirectoryURL = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0];
     
-    NSURL *persistentURL = [documentDirectoryURL URLByAppendingPathComponent:[NSString stringWithFormat:@"%s.sqlite", kPROJECTNAME]];
+    NSURL *persistentURL = [documentDirectoryURL URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", kPROJECTNAME]];
     
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:kPROJECTNAME withExtension:@"momd"];
     
@@ -70,7 +69,7 @@ static CoreDataManager *coreDataManager;
                                                                                              options:nil
                                                                                                error:&error];
     if (persistentStore) {
-        self.managedObjectContext = [[NSManagedObjectContext alloc] init];
+        self.managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
         self.managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     } else {
         NSLog(@"ERROR: %@", error.description);
@@ -96,7 +95,7 @@ static CoreDataManager *coreDataManager;
     fetchRequest.entity = entity;
     fetchRequest.sortDescriptors = sortDescriptors;
     fetchRequest.predicate = predicate;
-    [[NSArrayController alloc] init]
+    [NSArrayController]
     arrayController = [[NSArrayController alloc] initWithFetchRequest:fetchRequest
                                                                    managedObjectContext:self.managedObjectContext
                                                                      sectionNameKeyPath:sectionNameKeypath

@@ -7,12 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "ProgramService.h"
+
+@interface ViewController (){
+    IBOutlet NSTextField *statusTextfield;
+}
+
+@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [statusTextfield setStringValue:@"Connecting to Database"];
+    ProgramService *programService = [[ProgramService alloc] init];
+    [programService fetchDataDoOnSuccess:^{
+        NSLog(@"did Fetch Data with success");
+        [statusTextfield setStringValue:@"Success"];
+    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+        [statusTextfield setStringValue:@"Failure"];
+    }];
     // Do any additional setup after loading the view.
 }
 

@@ -31,13 +31,16 @@
 		7C686E3D1BA05B260063C8E3 /* Ingest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E311BA05B260063C8E3 /* Ingest.m */; settings = {ASSET_TAGS = (); }; };
 		7C686E401BA05C140063C8E3 /* CPLService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E3F1BA05C140063C8E3 /* CPLService.m */; settings = {ASSET_TAGS = (); }; };
 		7C686E431BA05DD30063C8E3 /* CPLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E421BA05DD30063C8E3 /* CPLParser.m */; settings = {ASSET_TAGS = (); }; };
-		7C686E461BA064F00063C8E3 /* mySQLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E451BA064F00063C8E3 /* mySQLController.m */; settings = {ASSET_TAGS = (); }; };
+		7C686E461BA064F00063C8E3 /* mySQLConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E451BA064F00063C8E3 /* mySQLConnect.m */; settings = {ASSET_TAGS = (); }; };
 		7C686E481BA06F270063C8E3 /* MCPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C686E471BA06F270063C8E3 /* MCPKit.framework */; settings = {ASSET_TAGS = (); }; };
 		7C686E4B1BA078280063C8E3 /* ProgramService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E4A1BA078280063C8E3 /* ProgramService.m */; settings = {ASSET_TAGS = (); }; };
 		7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E4D1BA078AB0063C8E3 /* BaseService.m */; settings = {ASSET_TAGS = (); }; };
 		7C686E511BA079B80063C8E3 /* ProgramParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E501BA079B80063C8E3 /* ProgramParser.m */; settings = {ASSET_TAGS = (); }; };
 		7C686E541BA079CD0063C8E3 /* BaseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E531BA079CD0063C8E3 /* BaseParser.m */; settings = {ASSET_TAGS = (); }; };
-		7C686E571BA090690063C8E3 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E561BA090690063C8E3 /* CoreDataManager.m */; settings = {ASSET_TAGS = (); }; };
+		7C870B331BA16F6400EB26CE /* MCPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7C686E471BA06F270063C8E3 /* MCPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7C870B361BA17FC000EB26CE /* mySQLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B351BA17FC000EB26CE /* mySQLQuery.m */; settings = {ASSET_TAGS = (); }; };
+		7C870B391BA1809400EB26CE /* mySQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B381BA1809400EB26CE /* mySQLManager.m */; settings = {ASSET_TAGS = (); }; };
+		7C870B3D1BA1B30900EB26CE /* CPLs+Provider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B3C1BA1B30900EB26CE /* CPLs+Provider.m */; settings = {ASSET_TAGS = (); }; };
 		B8B620ACAD2CA652FEF2E8A4 /* libPods-Calendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551320415CF1558762DC0697 /* libPods-Calendar.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,19 @@
 			remoteInfo = Calendar;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C870B321BA16F4D00EB26CE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7C870B331BA16F6400EB26CE /* MCPKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3AD5E07CE6A6B2E2BC22E192 /* Pods-Calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +123,8 @@
 		7C686E3F1BA05C140063C8E3 /* CPLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLService.m; sourceTree = "<group>"; };
 		7C686E411BA05DD30063C8E3 /* CPLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLParser.h; sourceTree = "<group>"; };
 		7C686E421BA05DD30063C8E3 /* CPLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLParser.m; sourceTree = "<group>"; };
-		7C686E441BA064F00063C8E3 /* mySQLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mySQLController.h; path = ../Services/mySQLController.h; sourceTree = "<group>"; };
-		7C686E451BA064F00063C8E3 /* mySQLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mySQLController.m; path = ../Services/mySQLController.m; sourceTree = "<group>"; };
+		7C686E441BA064F00063C8E3 /* mySQLConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mySQLConnect.h; path = ../Services/mySQLConnect.h; sourceTree = "<group>"; };
+		7C686E451BA064F00063C8E3 /* mySQLConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mySQLConnect.m; path = ../Services/mySQLConnect.m; sourceTree = "<group>"; };
 		7C686E471BA06F270063C8E3 /* MCPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MCPKit.framework; sourceTree = "<group>"; };
 		7C686E491BA078280063C8E3 /* ProgramService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramService.h; sourceTree = "<group>"; };
 		7C686E4A1BA078280063C8E3 /* ProgramService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramService.m; sourceTree = "<group>"; };
@@ -118,8 +134,14 @@
 		7C686E501BA079B80063C8E3 /* ProgramParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramParser.m; sourceTree = "<group>"; };
 		7C686E521BA079CD0063C8E3 /* BaseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseParser.h; sourceTree = "<group>"; };
 		7C686E531BA079CD0063C8E3 /* BaseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseParser.m; sourceTree = "<group>"; };
-		7C686E551BA090690063C8E3 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
-		7C686E561BA090690063C8E3 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		7C870B311BA15FAC00EB26CE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7C870B341BA17FC000EB26CE /* mySQLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySQLQuery.h; sourceTree = "<group>"; };
+		7C870B351BA17FC000EB26CE /* mySQLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySQLQuery.m; sourceTree = "<group>"; };
+		7C870B371BA1809400EB26CE /* mySQLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySQLManager.h; sourceTree = "<group>"; };
+		7C870B381BA1809400EB26CE /* mySQLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySQLManager.m; sourceTree = "<group>"; };
+		7C870B3A1BA18EB100EB26CE /* Calendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Calendar.entitlements; sourceTree = "<group>"; };
+		7C870B3B1BA1B30900EB26CE /* CPLs+Provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPLs+Provider.h"; sourceTree = "<group>"; };
+		7C870B3C1BA1B30900EB26CE /* CPLs+Provider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPLs+Provider.m"; sourceTree = "<group>"; };
 		7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +217,7 @@
 		7C16A4161B9F195600429261 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				7C870B3A1BA18EB100EB26CE /* Calendar.entitlements */,
 				7C686DEF1BA01EBA0063C8E3 /* Calendar-Info.plist */,
 				7C686DF01BA01EBA0063C8E3 /* Calendar-Prefix.pch */,
 				7C686DFD1BA020050063C8E3 /* Classes */,
@@ -235,6 +258,7 @@
 			children = (
 				7C686DFE1BA020050063C8E3 /* AppDelegate.h */,
 				7C686DFF1BA020050063C8E3 /* AppDelegate.m */,
+				7C870B311BA15FAC00EB26CE /* Constants.h */,
 				7C686E001BA020050063C8E3 /* Externals */,
 				7C686E011BA020050063C8E3 /* Managers */,
 				7C686E021BA020050063C8E3 /* Models */,
@@ -258,8 +282,12 @@
 		7C686E011BA020050063C8E3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7C686E551BA090690063C8E3 /* CoreDataManager.h */,
-				7C686E561BA090690063C8E3 /* CoreDataManager.m */,
+				7C686E441BA064F00063C8E3 /* mySQLConnect.h */,
+				7C686E451BA064F00063C8E3 /* mySQLConnect.m */,
+				7C870B341BA17FC000EB26CE /* mySQLQuery.h */,
+				7C870B351BA17FC000EB26CE /* mySQLQuery.m */,
+				7C870B371BA1809400EB26CE /* mySQLManager.h */,
+				7C870B381BA1809400EB26CE /* mySQLManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -328,6 +356,8 @@
 		7C686E061BA020050063C8E3 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				7C870B3B1BA1B30900EB26CE /* CPLs+Provider.h */,
+				7C870B3C1BA1B30900EB26CE /* CPLs+Provider.m */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -348,8 +378,6 @@
 		7C686E081BA020050063C8E3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				7C686E441BA064F00063C8E3 /* mySQLController.h */,
-				7C686E451BA064F00063C8E3 /* mySQLController.m */,
 				7C686E091BA020050063C8E3 /* Categories */,
 			);
 			path = Tools;
@@ -407,6 +435,7 @@
 				7C16A4111B9F195600429261 /* Frameworks */,
 				7C16A4121B9F195600429261 /* Resources */,
 				8CD4815B151D7B9043EDC1E2 /* Copy Pods Resources */,
+				7C870B321BA16F4D00EB26CE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -464,6 +493,12 @@
 				TargetAttributes = {
 					7C16A4131B9F195600429261 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5FRFTTP886;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+						};
 					};
 					7C16A42C1B9F195700429261 = {
 						CreatedOnToolsVersion = 7.0;
@@ -565,22 +600,24 @@
 				7C686E0E1BA020050063C8E3 /* AppDelegate.m in Sources */,
 				7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */,
 				7C686E431BA05DD30063C8E3 /* CPLParser.m in Sources */,
+				7C870B361BA17FC000EB26CE /* mySQLQuery.m in Sources */,
 				7C686E361BA05B260063C8E3 /* Programs+CoreDataProperties.m in Sources */,
 				7C686E3A1BA05B260063C8E3 /* FirstParts+CoreDataProperties.m in Sources */,
 				7C686E121BA020370063C8E3 /* CalendarModel.xcdatamodeld in Sources */,
 				7C686E321BA05B260063C8E3 /* Calendar+CoreDataProperties.m in Sources */,
 				7C686E351BA05B260063C8E3 /* CPLs.m in Sources */,
 				7C686E3B1BA05B260063C8E3 /* FirstParts.m in Sources */,
-				7C686E461BA064F00063C8E3 /* mySQLController.m in Sources */,
+				7C686E461BA064F00063C8E3 /* mySQLConnect.m in Sources */,
 				7C686E511BA079B80063C8E3 /* ProgramParser.m in Sources */,
 				7C686E341BA05B260063C8E3 /* CPLs+CoreDataProperties.m in Sources */,
 				7C686E331BA05B260063C8E3 /* Calendar.m in Sources */,
+				7C870B391BA1809400EB26CE /* mySQLManager.m in Sources */,
 				7C686E4B1BA078280063C8E3 /* ProgramService.m in Sources */,
 				7C686E391BA05B260063C8E3 /* KDMs.m in Sources */,
 				7C16A41C1B9F195600429261 /* main.m in Sources */,
-				7C686E571BA090690063C8E3 /* CoreDataManager.m in Sources */,
 				7C686E381BA05B260063C8E3 /* KDMs+CoreDataProperties.m in Sources */,
 				7C686E3D1BA05B260063C8E3 /* Ingest.m in Sources */,
+				7C870B3D1BA1B30900EB26CE /* CPLs+Provider.m in Sources */,
 				7C686E3C1BA05B260063C8E3 /* Ingest+CoreDataProperties.m in Sources */,
 				7C686E0F1BA020050063C8E3 /* ViewController.m in Sources */,
 				7C686E401BA05C140063C8E3 /* CPLService.m in Sources */,
@@ -713,6 +750,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AD5E07CE6A6B2E2BC22E192 /* Pods-Calendar.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -720,6 +759,7 @@
 				);
 				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ADDE.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -729,6 +769,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Calendar/Calendar.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -736,6 +778,7 @@
 				);
 				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ADDE.Calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

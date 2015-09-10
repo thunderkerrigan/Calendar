@@ -4,7 +4,7 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="featureID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="idCalendar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idCalendar" attributeType="String" syncable="YES"/>
         <attribute name="idCPL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idSPL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -84,10 +84,10 @@
     </entity>
     <elements>
         <element name="Calendar" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="Ingest" positionX="-54" positionY="63" width="128" height="210"/>
-        <element name="Programs" positionX="-36" positionY="126" width="128" height="180"/>
         <element name="CPLs" positionX="-18" positionY="153" width="128" height="480"/>
-        <element name="KDMs" positionX="9" positionY="171" width="128" height="45"/>
         <element name="FirstParts" positionX="27" positionY="180" width="128" height="210"/>
+        <element name="Ingest" positionX="-54" positionY="63" width="128" height="210"/>
+        <element name="KDMs" positionX="9" positionY="171" width="128" height="45"/>
+        <element name="Programs" positionX="-36" positionY="126" width="128" height="180"/>
     </elements>
 </model>
