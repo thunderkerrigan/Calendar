@@ -14,4 +14,12 @@
 typedef void (^ParserOnSuccess)(void);
 typedef void (^ParserOnFailure)(void);
 
++ (void)parseData:(NSData *)data
+      doOnSuccess:(ParserOnSuccess)success
+        onFailure:(ParserOnFailure)failure;
+
++ (void)parseArray:(NSMutableArray *)array
+       doOnSuccess:(ParserOnSuccess)success
+         onFailure:(ParserOnFailure)failure;
+
 @end

@@ -10,6 +10,7 @@
 //
 
 #import "Programs.h"
+#import <MDMCoreData/NSManagedObject+MDMCoreDataAdditions.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

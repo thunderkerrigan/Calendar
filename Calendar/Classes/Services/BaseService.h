@@ -14,4 +14,7 @@ typedef void (^ServiceOnSuccess)(void);
 typedef void (^ServiceOnFailure)(int errorCode, NSDictionary
                                            *errorMessages);
 
+- (void)fetchDataDoOnSuccess:(ServiceOnSuccess)success
+                   onFailure:(ServiceOnFailure)failure;
+
 @end

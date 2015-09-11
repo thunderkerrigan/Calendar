@@ -8,7 +8,7 @@
 
 #import "ProgramParser.h"
 #import "mySQLConnect.h"
-#import "Program+Provider.h"
+#import "ProgramProvider.h"
 #import "Programs+CoreDataProperties.h"
 
 
@@ -46,8 +46,8 @@
     // on parse l'objet array
     BOOL __parserDidFail = NO;
     for (NSMutableArray *rowArray in array) {
-        NSLog(@"object : %@", rowArray);
-        Programs *program = [Program_Provider getOrCreateCPLWithID:rowArray[0]];
+        ProgramProvider *provider = [[ProgramProvider alloc] init];
+        Programs *program = [provider getOrCreateProgramWithID:rowArray[0]];
         [program setTitle:rowArray[1]];
         [program setTitle:rowArray[1]];
         [program setXml:rowArray[2]];
@@ -57,7 +57,7 @@
         [program setTemplate_identifier:rowArray[6]];
         [program setTemplate:rowArray[7]];
 //        [program setLastUpdate:rowArray[8]];
-        [Program_Provider saveContext];
+        [provider saveContext];
         //        XMLProgram = [[NSXMLDocument alloc] initWithXMLString:[[array objectAtIndex:0] objectAtIndex:0] options:0 error:nil];
     }
 

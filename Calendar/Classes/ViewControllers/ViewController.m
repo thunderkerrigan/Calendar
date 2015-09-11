@@ -8,10 +8,18 @@
 
 #import "ViewController.h"
 #import "ProgramService.h"
+#import "CPLService.h"
+#import "AppDelegate.h"
 
 @interface ViewController (){
     IBOutlet NSTextField *statusTextfield;
+    IBOutlet NSTextField *statusTextfield2;
+    IBOutlet NSArrayController *programsArrayController;
+    IBOutlet NSArrayController *CPLsArrayController;
+    IBOutlet NSTableView *programTableView;
 }
+
+@property (nonatomic, readonly) NSManagedObjectContext* managedObjectContext;
 
 @end
 
@@ -19,15 +27,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [statusTextfield setStringValue:@"Connecting to Database"];
+    
+    [statusTextfield setStringValue:@"Connecting to Database for Programs"];
+    [statusTextfield2 setStringValue:@"Connecting to Database For CPLs"];
+
     ProgramService *programService = [[ProgramService alloc] init];
+    CPLService *cplService = [[CPLService alloc] init];
+    
     [programService fetchDataDoOnSuccess:^{
-        NSLog(@"did Fetch Data with success");
         [statusTextfield setStringValue:@"Success"];
+        [cplService fetchDataDoOnSuccess:^{
+            [statusTextfield2 setStringValue:@"Success"];
+        } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+            NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+            [statusTextfield2 setStringValue:@"Failure"];
+        }];
     } onFailure:^(int errorCode, NSDictionary *errorMessages) {
         NSLog(@"error %d : %@", errorCode, [errorMessages description]);
         [statusTextfield setStringValue:@"Failure"];
     }];
+    
+
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -36,5 +58,16 @@
 
     // Update the view, if already loaded.
 }
+
+- (NSManagedObjectContext*)managedObjectContext
+{
+    return [ [(AppDelegate *)[NSApp delegate] persistenceController] managedObjectContext];
+}
+
+#pragma mark - NSTableViewDelegate
+
+
+
+#pragma mark - NSTableViewDataSource
 
 @end

@@ -30,7 +30,6 @@
             sharedManager = [[mySQLManager alloc] init];
         }
     }
-    NSLog(@"sharedmanager exist");
     return sharedManager;
 }
 
@@ -63,7 +62,6 @@
 - (void) tableFromQueryString:(NSString *)queryString
                              doOnSuccess:(SQLManagerOnSuccess)success
                                onFailure:(SQLManagerOnFailure)failure{
-    NSLog(@"before query");
     query.sql = queryString;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         BOOL queryStatus = [query execQuery];
@@ -79,7 +77,6 @@
             }
         }
     });
-    NSLog(@"after query");
 }
 
 - (NSMutableArray *) getResultArrayFromPreviousRequest{

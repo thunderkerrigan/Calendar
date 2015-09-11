@@ -7,13 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseService.h"
 
-@interface CPLService : NSObject
+@interface CPLService : BaseService
 
-// définition de l'interface des blocks passés en paramètre
-typedef void (^ServiceGetCPLOnSuccess)(void);
-typedef void (^ServiceGetCPLOnFailure)(int errorCode, NSDictionary
-                                         *errorMessages);
-- (void)fetchDataDoOnSuccess:(ServiceGetCPLOnSuccess)success
-                   onFailure:(ServiceGetCPLOnFailure)failure;
 @end

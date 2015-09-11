@@ -11,7 +11,4 @@
 
 @interface ProgramService : BaseService
 
-// définition de l'interface des blocks passés en paramètre
-- (void)fetchDataDoOnSuccess:(ServiceOnSuccess)success
-                   onFailure:(ServiceOnFailure)failure;
 @end

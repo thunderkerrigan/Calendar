@@ -38,7 +38,6 @@
             [rowArray removeAllObjects];
             for(NSInteger i=0;i<num_fields;i++){
                 if (row[i]) {
-                    NSLog(@"\n///\n///\nfield in %d --> %@\n", i , [NSString stringWithUTF8String:row[i]]);
                     NSString* sField = [NSString stringWithUTF8String:row[i]];
                     [rowArray addObject:sField];
                 }

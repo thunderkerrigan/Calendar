@@ -20,7 +20,6 @@
     // ou à la main avec NSURLConnection si on est un warrior
     // On parse notre objet Data
     NSString *requestType = @"select * from Programs where XML is not null and `Template` = b'0';";
-    NSLog(@"before call");
     [[mySQLManager sharedManager] tableFromQueryString:requestType doOnSuccess:^{
         NSMutableArray *resultArray = [[mySQLManager sharedManager] getResultArrayFromPreviousRequest];
         [ProgramParser parseArray:resultArray
@@ -47,7 +46,6 @@
     } onFailure:^(NSString *errorMessages) {
         NSLog(@"ERROR : %@", errorMessages);
     }];
-    NSLog(@"After call");
 }
 
 @end

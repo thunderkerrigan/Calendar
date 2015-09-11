@@ -10,4 +10,9 @@
 
 @implementation BaseService
 
+- (void)fetchDataDoOnSuccess:(ServiceOnSuccess)success
+                   onFailure:(ServiceOnFailure)failure{
+    
+}
+
 @end
