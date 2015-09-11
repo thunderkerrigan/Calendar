@@ -1022,9 +1022,6 @@
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        <connections>
-                                                            <binding destination="wSx-My-IEe" name="value" keyPath="selection" id="qzy-cg-voT"/>
-                                                        </connections>
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
@@ -1040,6 +1037,9 @@
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="Qfw-hj-YAJ" name="value" keyPath="objectValue.title" id="Pez-Hg-xPW"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <animations/>
@@ -1048,9 +1048,6 @@
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
-                                                    <connections>
-                                                        <binding destination="7cy-iC-1Bh" name="value" keyPath="arrangedObjects.title" id="f8g-5U-bv8"/>
-                                                    </connections>
                                                 </tableColumn>
                                                 <tableColumn width="428" minWidth="40" maxWidth="1000" id="3MF-H2-Mji">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
@@ -1141,7 +1138,7 @@
                         <binding destination="XfG-lQ-9wD" name="managedObjectContext" keyPath="self.managedObjectContext" id="1Ub-qx-C6f"/>
                     </connections>
                 </arrayController>
-                <arrayController mode="entity" entityName="Programs" automaticallyPreparesContent="YES" id="wSx-My-IEe">
+                <arrayController mode="entity" entityName="CPLs" automaticallyPreparesContent="YES" id="wSx-My-IEe">
                     <connections>
                         <binding destination="XfG-lQ-9wD" name="managedObjectContext" keyPath="self.managedObjectContext" id="IUs-i7-J6X"/>
                     </connections>

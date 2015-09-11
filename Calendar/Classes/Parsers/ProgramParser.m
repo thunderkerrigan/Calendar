@@ -56,7 +56,7 @@
         [program setCreditPositionCPL:rowArray[5]];
         [program setTemplate_identifier:rowArray[6]];
         [program setTemplate:rowArray[7]];
-//        [program setLastUpdate:rowArray[8]];
+        [program setLastUpdate:[NSDate dateWithString:rowArray[8]]];
         [provider saveContext];
         //        XMLProgram = [[NSXMLDocument alloc] initWithXMLString:[[array objectAtIndex:0] objectAtIndex:0] options:0 error:nil];
     }
