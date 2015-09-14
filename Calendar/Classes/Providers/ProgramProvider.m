@@ -8,7 +8,6 @@
 
 #import "ProgramProvider.h"
 #import "Programs+CoreDataProperties.h"
-#import "AppDelegate.h"
 
 @interface ProgramProvider ()
 

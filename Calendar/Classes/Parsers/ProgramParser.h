@@ -6,7 +6,6 @@
 //  Copyright © 2015 ADDE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "BaseParser.h"
 
 @interface ProgramParser : BaseParser

@@ -47,6 +47,8 @@
     BOOL __parserDidFail = NO;
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     for (NSMutableArray *rowArray in array) {
         CPLsProvider *provider = [[CPLsProvider alloc] init];
         CPLs *cpl = [provider getOrCreateCPLsWithID:rowArray[0]];
@@ -74,7 +76,7 @@
         [cpl setOriginalVersionTitle:rowArray[21]];
         [cpl setStored:rowArray[22]];
         [cpl setIngesting:rowArray[23]];
-        [cpl setLastUpdate:[NSDate dateWithString:rowArray[24]]];
+        [cpl setLastUpdate:[df dateFromString:rowArray[24]]];
         [cpl setValidationCheckFiles:rowArray[25]];
         [cpl setValidationFiles:rowArray[26]];
         [cpl setValidationCheckSize:rowArray[27]];

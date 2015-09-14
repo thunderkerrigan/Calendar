@@ -9,7 +9,6 @@
 #import "CPLService.h"
 #import "mySQLManager.h"
 #import "CPLParser.h"
-#import <AFNetworking/AFNetworking.h>
 
 @implementation CPLService
 
@@ -23,8 +22,8 @@
     // ou à la main avec NSURLConnection si on est un warrior
     // On parse notre objet Data
     NSString *requestType = @"select * from CPLs;";
-    [[mySQLManager sharedManager] tableFromQueryString:requestType doOnSuccess:^{
-        NSMutableArray *resultArray = [[mySQLManager sharedManager] getResultArrayFromPreviousRequest];
+    mySQLManager *manager = [[mySQLManager alloc] init];
+    [manager tableFromQueryString:requestType doOnSuccess:^(NSMutableArray *resultArray) {
         [CPLParser parseArray:resultArray
                       doOnSuccess:^{
                           // Tout s'est bien passé

@@ -1,47 +1,42 @@
 //
-//  CPLs+Provider.m
+//  CalendarProvider.m
 //  Calendar
 //
-//  Created by Joseph on 10/09/2015.
+//  Created by Joseph on 14/09/2015.
 //  Copyright © 2015 ADDE. All rights reserved.
 //
 
-#import "CPLsProvider.h"
-#import "CPLs+CoreDataProperties.h"
+#import "CalendarProvider.h"
+#import "Calendar+CoreDataProperties.h"
 
-@interface CPLsProvider ()
+@implementation CalendarProvider
 
-@end
-
-@implementation CPLsProvider
-
-#pragma mark - Create Methods
-
-- (CPLs *)createCPLs{
-    return (CPLs *)[NSEntityDescription insertNewObjectForEntityForName:[CPLs MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
+-(Calendar *)createCalendar{
+    return (Calendar *)[NSEntityDescription insertNewObjectForEntityForName:[Calendar MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
 }
 
-- (CPLs *)getOrCreateCPLsWithID:(NSString *)stringID {
+- (Calendar *)getOrCreateCalendarWithID:(NSString *)stringID{
     NSArray *fetchedObjects;
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:[CPLs MDMCoreDataAdditionsEntityName]  inManagedObjectContext: context];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:[Calendar MDMCoreDataAdditionsEntityName]  inManagedObjectContext: context];
     [fetch setEntity:entityDescription];
-    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(idCPL MATCHES %@)",stringID]];
+    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(idCalendar MATCHES %@)",stringID]];
     NSError * error = nil;
     fetchedObjects = [context executeFetchRequest:fetch error:&error];
     
     if([fetchedObjects count] == 1)
         return [fetchedObjects firstObject];
     else
-        return [self createCPLs];
+        return [self createCalendar];
+
 }
 
 #pragma mark - Get Methods
 
 - (NSArray *)getAll {
     NSManagedObjectContext *__moc = [self managedObjectContext];
-    NSFetchRequest *__request = [[NSFetchRequest alloc] init]; NSEntityDescription *__entity = [NSEntityDescription entityForName:[CPLs MDMCoreDataAdditionsEntityName] inManagedObjectContext:__moc];
+    NSFetchRequest *__request = [[NSFetchRequest alloc] init]; NSEntityDescription *__entity = [NSEntityDescription entityForName:[Calendar MDMCoreDataAdditionsEntityName] inManagedObjectContext:__moc];
     [__request setEntity:__entity];
     NSError *__requestError = nil;
     NSArray *__results = [__moc executeFetchRequest:__request error:&__requestError];
@@ -54,19 +49,20 @@
 
 #pragma mark - Delete Methods
 
-- (BOOL) deleteCPL:(CPLs *)cpl {
+- (BOOL) deleteCalendar:(Calendar *)calendar{
     NSManagedObjectContext *context = [self managedObjectContext];
-    [context deleteObject:cpl];
+    [context deleteObject:calendar];
     return [self saveContext];
 }
 
 - (BOOL)deleteAll {
     NSManagedObjectContext *__moc = [self managedObjectContext];
     NSArray *__allCPLs = [self getAll];
-    [__allCPLs enumerateObjectsUsingBlock:^(CPLs *cpl, NSUInteger idx, BOOL *stop) {
+    [__allCPLs enumerateObjectsUsingBlock:^(Calendar *cpl, NSUInteger idx, BOOL *stop) {
         [__moc deleteObject:cpl];
     }];
     return [self saveContext];
 }
+
 
 @end

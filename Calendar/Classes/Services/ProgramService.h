@@ -6,7 +6,6 @@
 //  Copyright © 2015 ADDE. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "BaseService.h"
 
 @interface ProgramService : BaseService

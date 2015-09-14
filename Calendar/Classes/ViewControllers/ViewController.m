@@ -9,14 +9,12 @@
 #import "ViewController.h"
 #import "ProgramService.h"
 #import "CPLService.h"
+#import "CalendarService.h"
 #import "AppDelegate.h"
 
 @interface ViewController (){
     IBOutlet NSTextField *statusTextfield;
     IBOutlet NSTextField *statusTextfield2;
-    IBOutlet NSArrayController *programsArrayController;
-    IBOutlet NSArrayController *CPLsArrayController;
-    IBOutlet NSTableView *programTableView;
 }
 
 @property (nonatomic, readonly) NSManagedObjectContext* managedObjectContext;
@@ -33,19 +31,29 @@
 
     ProgramService *programService = [[ProgramService alloc] init];
     CPLService *cplService = [[CPLService alloc] init];
+    CalendarService *calendarService = [[CalendarService alloc] init];
     
     [programService fetchDataDoOnSuccess:^{
         [statusTextfield setStringValue:@"Success"];
-        [cplService fetchDataDoOnSuccess:^{
-            [statusTextfield2 setStringValue:@"Success"];
-        } onFailure:^(int errorCode, NSDictionary *errorMessages) {
-            NSLog(@"error %d : %@", errorCode, [errorMessages description]);
-            [statusTextfield2 setStringValue:@"Failure"];
-        }];
     } onFailure:^(int errorCode, NSDictionary *errorMessages) {
         NSLog(@"error %d : %@", errorCode, [errorMessages description]);
         [statusTextfield setStringValue:@"Failure"];
     }];
+    [cplService fetchDataDoOnSuccess:^{
+        [statusTextfield2 setStringValue:@"Success"];
+    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+        [statusTextfield2 setStringValue:@"Failure"];
+    }];
+    
+    [calendarService fetchDataDoOnSuccess:^{
+//        [statusTextfield2 setStringValue:@"Success"];
+    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+//        [statusTextfield2 setStringValue:@"Failure"];
+    }];
+    
+    
     
 
     

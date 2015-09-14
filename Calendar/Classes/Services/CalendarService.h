@@ -1,13 +1,13 @@
 //
-//  CPLService.h
+//  CalendarService.h
 //  Calendar
 //
-//  Created by Joseph on 09/09/2015.
+//  Created by Joseph on 14/09/2015.
 //  Copyright © 2015 ADDE. All rights reserved.
 //
 
 #import "BaseService.h"
 
-@interface CPLService : BaseService
+@interface CalendarService : BaseService
 
 @end

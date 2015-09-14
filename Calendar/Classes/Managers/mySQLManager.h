@@ -10,13 +10,12 @@
 
 @interface mySQLManager : NSObject
 
-typedef void (^SQLManagerOnSuccess)(void);
+typedef void (^SQLManagerOnSuccess)(NSMutableArray *resultArray);
 typedef void (^SQLManagerOnFailure)(NSString *errorMessages);
 
-+ (mySQLManager *)sharedManager;
 - (void) tableFromQueryString:(NSString *)queryString
                              doOnSuccess:(SQLManagerOnSuccess)success
                                onFailure:(SQLManagerOnFailure)failure;
-- (NSMutableArray *) getResultArrayFromPreviousRequest;
+- (void) closeConnection;
 
 @end

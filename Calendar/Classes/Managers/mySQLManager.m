@@ -44,43 +44,38 @@
     @try{
         [db connect];
         query = [[mySQLQuery alloc] initWithDatabase:db];
-//        q.sql = @"select * from table1 order by id";
-//        [q execQuery];
-//        NSInteger len = q.recordCount;
-//        for(NSInteger i=0;i<len;i++){
-//            NSInteger id1 = [q integerValFromRow:i Column:0];
-//            NSString *stringV1 = [q stringValFromRow:i Column:1];
-//            //...
-//        }
     }
     @catch (NSException *exception) {
         [db errorMessage];
     }
-    return self;
+       return self;
 }
 
 - (void) tableFromQueryString:(NSString *)queryString
                              doOnSuccess:(SQLManagerOnSuccess)success
                                onFailure:(SQLManagerOnFailure)failure{
+
     query.sql = queryString;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         BOOL queryStatus = [query execQuery];
         if (queryStatus) {
             if(success)
             {
-                success();
+                success([query getResultArray]);
+                [self closeConnection];
             }
         } else {
             if(failure) {
                 // le paramètre existe, on exécute le block qui traite l'échec
                 failure(@"query error");
+                [self closeConnection];
             }
         }
     });
 }
 
-- (NSMutableArray *) getResultArrayFromPreviousRequest{
-    return [query getResultArray];
+- (void) closeConnection {
+    [db disconnect];
 }
 
 @end
