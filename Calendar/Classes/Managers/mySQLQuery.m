@@ -24,7 +24,7 @@
 
 -(BOOL)execQuery
 {
-    NSLog(@"begin executing query");
+    NSLog(@"\n_________________\nbegin executing query\n_________________\n query: %@\n", sql);
     [rowsArray removeAllObjects];
     NSMutableArray *rowArray = [[NSMutableArray alloc] init];
     num_fields = 0;
@@ -47,7 +47,7 @@
             }
             [rowsArray addObject:[rowArray copy]];
         }
-        
+            NSLog(@"\n_________________\nend executing query\n_________________\n result: %lu fetched objects for %@\n", (unsigned long)[rowsArray count], sql);
         mysql_free_result(res);
         return YES;
     }

@@ -15,6 +15,7 @@
 -(Programs *)createPrograms;
 - (Programs *)getOrCreateProgramWithID:(NSString *)stringID;
 - (BOOL) deleteProgram:(Programs *)program;
+- (BOOL) updatePrograms;
 
 
 @end

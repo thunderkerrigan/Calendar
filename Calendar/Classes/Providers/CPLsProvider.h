@@ -15,6 +15,6 @@
 -(CPLs *)createCPLs;
 - (CPLs *)getOrCreateCPLsWithID:(NSString *)stringID;
 - (BOOL) deleteCPL:(CPLs *)cpl;
-
+- (BOOL) updateCPLs;
 
 @end

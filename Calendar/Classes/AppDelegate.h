@@ -12,9 +12,6 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic, strong) MDMPersistenceController *persistenceController;
-//@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-//@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-//@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 
 @end

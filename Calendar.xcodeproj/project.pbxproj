@@ -32,12 +32,12 @@
 		7C686E401BA05C140063C8E3 /* CPLService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E3F1BA05C140063C8E3 /* CPLService.m */; };
 		7C686E431BA05DD30063C8E3 /* CPLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E421BA05DD30063C8E3 /* CPLParser.m */; };
 		7C686E461BA064F00063C8E3 /* mySQLConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E451BA064F00063C8E3 /* mySQLConnect.m */; };
-		7C686E481BA06F270063C8E3 /* MCPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C686E471BA06F270063C8E3 /* MCPKit.framework */; };
 		7C686E4B1BA078280063C8E3 /* ProgramService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E4A1BA078280063C8E3 /* ProgramService.m */; };
 		7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E4D1BA078AB0063C8E3 /* BaseService.m */; };
 		7C686E511BA079B80063C8E3 /* ProgramParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E501BA079B80063C8E3 /* ProgramParser.m */; };
 		7C686E541BA079CD0063C8E3 /* BaseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C686E531BA079CD0063C8E3 /* BaseParser.m */; };
-		7C870B331BA16F6400EB26CE /* MCPKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7C686E471BA06F270063C8E3 /* MCPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7C7A1D951BA806070076136C /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A1D941BA806070076136C /* CalendarManager.m */; };
+		7C7A1D981BA8421D0076136C /* Calendar+SCKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A1D971BA8421D0076136C /* Calendar+SCKEvent.m */; };
 		7C870B361BA17FC000EB26CE /* mySQLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B351BA17FC000EB26CE /* mySQLQuery.m */; };
 		7C870B391BA1809400EB26CE /* mySQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B381BA1809400EB26CE /* mySQLManager.m */; };
 		7C870B3D1BA1B30900EB26CE /* CPLsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C870B3C1BA1B30900EB26CE /* CPLsProvider.m */; };
@@ -49,6 +49,8 @@
 		7CEB764B1BA6CDBE00773519 /* CalendarTimeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB764A1BA6CDBE00773519 /* CalendarTimeTableView.m */; };
 		7CEB764E1BA6D74000773519 /* MovieShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB764D1BA6D74000773519 /* MovieShowView.m */; };
 		7CEB76531BA6D80C00773519 /* RoomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB76521BA6D80C00773519 /* RoomViewCell.m */; };
+		7CEB76551BA7106A00773519 /* ScheduleKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CEB76541BA7106A00773519 /* ScheduleKit.framework */; };
+		7CEB765A1BA715BC00773519 /* ScheduleKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CEB76541BA7106A00773519 /* ScheduleKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B8B620ACAD2CA652FEF2E8A4 /* libPods-Calendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 551320415CF1558762DC0697 /* libPods-Calendar.a */; };
 /* End PBXBuildFile section */
 
@@ -70,13 +72,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7C870B321BA16F4D00EB26CE /* CopyFiles */ = {
+		7CEB76581BA715A000773519 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7C870B331BA16F6400EB26CE /* MCPKit.framework in CopyFiles */,
+				7CEB765A1BA715BC00773519 /* ScheduleKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +135,6 @@
 		7C686E421BA05DD30063C8E3 /* CPLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLParser.m; sourceTree = "<group>"; };
 		7C686E441BA064F00063C8E3 /* mySQLConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mySQLConnect.h; path = ../Services/mySQLConnect.h; sourceTree = "<group>"; };
 		7C686E451BA064F00063C8E3 /* mySQLConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mySQLConnect.m; path = ../Services/mySQLConnect.m; sourceTree = "<group>"; };
-		7C686E471BA06F270063C8E3 /* MCPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MCPKit.framework; sourceTree = "<group>"; };
 		7C686E491BA078280063C8E3 /* ProgramService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramService.h; sourceTree = "<group>"; };
 		7C686E4A1BA078280063C8E3 /* ProgramService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramService.m; sourceTree = "<group>"; };
 		7C686E4C1BA078AB0063C8E3 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
@@ -142,6 +143,10 @@
 		7C686E501BA079B80063C8E3 /* ProgramParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramParser.m; sourceTree = "<group>"; };
 		7C686E521BA079CD0063C8E3 /* BaseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseParser.h; sourceTree = "<group>"; };
 		7C686E531BA079CD0063C8E3 /* BaseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseParser.m; sourceTree = "<group>"; };
+		7C7A1D931BA806070076136C /* CalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		7C7A1D941BA806070076136C /* CalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
+		7C7A1D961BA8421D0076136C /* Calendar+SCKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Calendar+SCKEvent.h"; sourceTree = "<group>"; };
+		7C7A1D971BA8421D0076136C /* Calendar+SCKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Calendar+SCKEvent.m"; sourceTree = "<group>"; };
 		7C870B311BA15FAC00EB26CE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		7C870B341BA17FC000EB26CE /* mySQLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySQLQuery.h; sourceTree = "<group>"; };
 		7C870B351BA17FC000EB26CE /* mySQLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySQLQuery.m; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 		7CEB764D1BA6D74000773519 /* MovieShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieShowView.m; sourceTree = "<group>"; };
 		7CEB76511BA6D80C00773519 /* RoomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewCell.h; sourceTree = "<group>"; };
 		7CEB76521BA6D80C00773519 /* RoomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewCell.m; sourceTree = "<group>"; };
+		7CEB76541BA7106A00773519 /* ScheduleKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ScheduleKit.framework; sourceTree = "<group>"; };
 		7CF0EF69E59EC41BD77EE408 /* Pods-Calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendar/Pods-Calendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E410D81BBA302D40FCC7FFA /* libPods.a in Frameworks */,
-				7C686E481BA06F270063C8E3 /* MCPKit.framework in Frameworks */,
+				7CEB76551BA7106A00773519 /* ScheduleKit.framework in Frameworks */,
 				B8B620ACAD2CA652FEF2E8A4 /* libPods-Calendar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +215,7 @@
 		488789A32FB46A102CBC1C48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7C686E471BA06F270063C8E3 /* MCPKit.framework */,
+				7CEB76541BA7106A00773519 /* ScheduleKit.framework */,
 				6DF42276CEEC8A52BC876732 /* libPods.a */,
 				551320415CF1558762DC0697 /* libPods-Calendar.a */,
 			);
@@ -312,6 +318,8 @@
 				7C870B351BA17FC000EB26CE /* mySQLQuery.m */,
 				7C870B371BA1809400EB26CE /* mySQLManager.h */,
 				7C870B381BA1809400EB26CE /* mySQLManager.m */,
+				7C7A1D931BA806070076136C /* CalendarManager.h */,
+				7C7A1D941BA806070076136C /* CalendarManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -420,6 +428,8 @@
 		7C686E091BA020050063C8E3 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				7C7A1D961BA8421D0076136C /* Calendar+SCKEvent.h */,
+				7C7A1D971BA8421D0076136C /* Calendar+SCKEvent.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -475,7 +485,7 @@
 				7C16A4111B9F195600429261 /* Frameworks */,
 				7C16A4121B9F195600429261 /* Resources */,
 				8CD4815B151D7B9043EDC1E2 /* Copy Pods Resources */,
-				7C870B321BA16F4D00EB26CE /* CopyFiles */,
+				7CEB76581BA715A000773519 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -641,6 +651,7 @@
 				7C686E0E1BA020050063C8E3 /* AppDelegate.m in Sources */,
 				7C686E4E1BA078AB0063C8E3 /* BaseService.m in Sources */,
 				7C686E431BA05DD30063C8E3 /* CPLParser.m in Sources */,
+				7C7A1D981BA8421D0076136C /* Calendar+SCKEvent.m in Sources */,
 				7CEB76421BA6B35900773519 /* CalendarService.m in Sources */,
 				7C870B361BA17FC000EB26CE /* mySQLQuery.m in Sources */,
 				7C686E361BA05B260063C8E3 /* Programs+CoreDataProperties.m in Sources */,
@@ -665,6 +676,7 @@
 				7C686E381BA05B260063C8E3 /* KDMs+CoreDataProperties.m in Sources */,
 				7C686E3D1BA05B260063C8E3 /* Ingest.m in Sources */,
 				7C870B3D1BA1B30900EB26CE /* CPLsProvider.m in Sources */,
+				7C7A1D951BA806070076136C /* CalendarManager.m in Sources */,
 				7C686E3C1BA05B260063C8E3 /* Ingest+CoreDataProperties.m in Sources */,
 				7C686E0F1BA020050063C8E3 /* ViewController.m in Sources */,
 				7CEB764B1BA6CDBE00773519 /* CalendarTimeTableView.m in Sources */,

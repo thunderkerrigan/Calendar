@@ -69,4 +69,10 @@
     return [self saveContext];
 }
 
+#pragma mark - update Methods
+
+- (BOOL) updateCPLs{
+    return [self saveContext];
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "BaseProvider.h"
+#import <ScheduleKit/ScheduleKit.h>
 
 @class Calendar;
 
@@ -15,5 +16,6 @@
 -(Calendar *)createCalendar;
 - (Calendar *)getOrCreateCalendarWithID:(NSString *)stringID;
 - (BOOL) deleteCalendar:(Calendar *)calendar;
+- (BOOL) updateCalendars;
 
 @end
