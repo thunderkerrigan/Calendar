@@ -8,6 +8,7 @@
 
 #import "Calendar+SCKEvent.h"
 #import "CPLs+CoreDataProperties.h"
+#import "CalendarProvider.h"
 
 @implementation Calendar (SCKEventCategory)
 
@@ -52,7 +53,8 @@
  *  @return A NSNumber object representing the event duration in minutes.
  */
 - (NSNumber*)duration{
-    return [self calendarToCPL] != 0 ? [[self calendarToCPL] duration] : [NSNumber numberWithInt:60];
+//    return [self calendarToCPL] != 0 ? [[self calendarToCPL] duration] : [NSNumber numberWithInt:60];
+    return [NSNumber numberWithInt:60];
 }
 
 /**
@@ -76,8 +78,9 @@
  *  @param scheduledDate The new event's start date.
  */
 - (void)setScheduledDate:(NSDate*)scheduledDate{
-//    [self setDate:scheduledDate];
-//    [provider updateCalendars];
+    [self setDate:scheduledDate];
+    CalendarProvider *provider = [[CalendarProvider alloc] init];
+    [provider updateCalendars];
 }
 
 

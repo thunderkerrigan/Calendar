@@ -19,7 +19,7 @@
     // via AFNetworking par exemple
     // ou à la main avec NSURLConnection si on est un warrior
     // On parse notre objet Data
-    NSString *requestType = @"select * from Calendar;";
+    NSString *requestType = @"select * from Calendar where ProgramTitleText is not null;";
     mySQLManager *manager = [[mySQLManager alloc] init];
     [manager tableFromQueryString:requestType doOnSuccess:^(NSMutableArray *resultArray) {
         [CalendarParser parseArray:resultArray

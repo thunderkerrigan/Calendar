@@ -696,7 +696,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-P6-vcw">
+                            <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-P6-vcw">
                                 <rect key="frame" x="1075" y="20" width="305" height="695"/>
                                 <clipView key="contentView" ambiguous="YES" id="4ss-8k-3jT">
                                     <rect key="frame" x="1" y="0.0" width="303" height="694"/>
@@ -1205,12 +1205,48 @@
                                     </binding>
                                 </connections>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-EF-F7N">
+                                <rect key="frame" x="1210" y="752" width="176" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="Zdd-Wg-fLQ"/>
+                                </constraints>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="DELETE ALL" bezelStyle="rounded" image="NSTrashEmpty" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3uR-uG-ZPU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="deleteAll:" target="XfG-lQ-9wD" id="wP6-vg-4A8"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0NY-QA-sRZ">
+                                <rect key="frame" x="1210" y="724" width="176" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="b14-DG-uDG"/>
+                                </constraints>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="GET ALL" bezelStyle="rounded" image="NSAddTemplate" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jMA-mB-lhE">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addAll:" target="XfG-lQ-9wD" id="nGj-bN-N8e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="1Z3-P6-vcw" firstAttribute="leading" secondItem="fmL-Qp-9wM" secondAttribute="trailing" constant="8" id="9qw-Fw-hAb"/>
                             <constraint firstItem="QtY-LW-5Nr" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="AgV-fR-1Ao"/>
+                            <constraint firstAttribute="trailing" secondItem="Vo6-EF-F7N" secondAttribute="trailing" constant="20" id="G5V-3E-Wkv"/>
                             <constraint firstItem="ki1-fP-xkY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="OWr-Su-x8B"/>
+                            <constraint firstItem="1Z3-P6-vcw" firstAttribute="top" secondItem="0NY-QA-sRZ" secondAttribute="bottom" constant="16" id="SRo-8q-Fwi"/>
+                            <constraint firstItem="Vo6-EF-F7N" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="XKj-d8-wFQ"/>
                             <constraint firstItem="QtY-LW-5Nr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="d0k-mt-6dQ"/>
+                            <constraint firstItem="0NY-QA-sRZ" firstAttribute="centerX" secondItem="Vo6-EF-F7N" secondAttribute="centerX" id="e3C-7o-UWQ"/>
                             <constraint firstItem="ki1-fP-xkY" firstAttribute="top" secondItem="QtY-LW-5Nr" secondAttribute="bottom" constant="10" id="igs-le-ckg"/>
+                            <constraint firstAttribute="bottom" secondItem="1Z3-P6-vcw" secondAttribute="bottom" constant="20" id="mc5-cp-lpX"/>
+                            <constraint firstAttribute="trailing" secondItem="1Z3-P6-vcw" secondAttribute="trailing" constant="20" id="tJJ-0W-VLL"/>
+                            <constraint firstItem="0NY-QA-sRZ" firstAttribute="top" secondItem="Vo6-EF-F7N" secondAttribute="bottom" constant="7" id="uL1-yY-i3D"/>
                         </constraints>
                         <animations/>
                     </view>
@@ -1310,6 +1346,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSTrashEmpty" width="32" height="32"/>
     </resources>
 </document>

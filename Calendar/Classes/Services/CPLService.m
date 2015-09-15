@@ -21,7 +21,7 @@
     // via AFNetworking par exemple
     // ou à la main avec NSURLConnection si on est un warrior
     // On parse notre objet Data
-    NSString *requestType = @"select * from CPLs;";
+    NSString *requestType = @"select * from CPLs where LastUpdate is not null;";
     mySQLManager *manager = [[mySQLManager alloc] init];
     [manager tableFromQueryString:requestType doOnSuccess:^(NSMutableArray *resultArray) {
         [CPLParser parseArray:resultArray

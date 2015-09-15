@@ -13,6 +13,9 @@
 #import "AppDelegate.h"
 #import "CalendarManager.h"
 #import <NSDate+Calendar.h>
+#import "ProgramProvider.h"
+#import "CPLsProvider.h"
+#import "CalendarProvider.h"
 
 @interface ViewController (){
     IBOutlet NSTextField *statusTextfield;
@@ -29,6 +32,9 @@
 
 -(IBAction)previousDay:(id)sender;
 -(IBAction)nextDay:(id)sender;
+-(IBAction)deleteAll:(id)sender;
+-(IBAction)addAll:(id)sender;
+
 
 @end
 
@@ -47,36 +53,8 @@
     
     [statusTextfield setStringValue:@"Connecting to Database for Programs"];
     [statusTextfield2 setStringValue:@"Connecting to Database For CPLs"];
-
-    ProgramService *programService = [[ProgramService alloc] init];
-    CPLService *cplService = [[CPLService alloc] init];
-    CalendarService *calendarService = [[CalendarService alloc] init];
     
-    [programService fetchDataDoOnSuccess:^{
-        [statusTextfield setStringValue:@"Success"];
-    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
-        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
-        [statusTextfield setStringValue:@"Failure"];
-    }];
-    [cplService fetchDataDoOnSuccess:^{
-        [statusTextfield2 setStringValue:@"Success"];
-    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
-        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
-        [statusTextfield2 setStringValue:@"Failure"];
-    }];
-    
-    [calendarService fetchDataDoOnSuccess:^{
-//        [statusTextfield2 setStringValue:@"Success"];
-    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
-        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
-//        [statusTextfield2 setStringValue:@"Failure"];
-    }];
-    
-    
-    
-
-    
-    
+    [self addAll:self];
     // Do any additional setup after loading the view.
 }
 
@@ -215,6 +193,41 @@
     NSDate *dayEnding = [cal dateBySettingHour:6 minute:0 second:0 ofDate:[self.currentDisplayedDate dateByAddingDays:1] options:0];
     _dayEventManager.view.startDate = dayBeginning;
     _dayEventManager.view.endDate = dayEnding;
+}
+
+-(void)deleteAll:(id)sender{
+    ProgramProvider *programProvider = [[ProgramProvider alloc] init];
+    CalendarProvider *calendarProvider = [[CalendarProvider alloc] init];
+    CPLsProvider *cplsProvider = [[CPLsProvider alloc] init];
+    [programProvider deleteAll];
+    [calendarProvider deleteAll];
+    [cplsProvider deleteAll];
+}
+
+-(void)addAll:(id)sender{
+    ProgramService *programService = [[ProgramService alloc] init];
+    CPLService *cplService = [[CPLService alloc] init];
+    CalendarService *calendarService = [[CalendarService alloc] init];
+    
+    [programService fetchDataDoOnSuccess:^{
+        [statusTextfield setStringValue:@"Success"];
+    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+        [statusTextfield setStringValue:@"Failure"];
+    }];
+    [cplService fetchDataDoOnSuccess:^{
+        [statusTextfield2 setStringValue:@"Success"];
+    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+        [statusTextfield2 setStringValue:@"Failure"];
+    }];
+    
+    [calendarService fetchDataDoOnSuccess:^{
+        //        [statusTextfield2 setStringValue:@"Success"];
+    } onFailure:^(int errorCode, NSDictionary *errorMessages) {
+        NSLog(@"error %d : %@", errorCode, [errorMessages description]);
+        //        [statusTextfield2 setStringValue:@"Failure"];
+    }];
 }
 
 @end
