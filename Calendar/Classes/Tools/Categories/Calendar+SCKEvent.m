@@ -7,6 +7,7 @@
 //
 
 #import "Calendar+SCKEvent.h"
+#import "CPLs+CoreDataProperties.h"
 
 @implementation Calendar (SCKEventCategory)
 
@@ -43,7 +44,7 @@
  *  @return The requested NSString object.
  */
 - (NSString*)title{
-    return [self programTitle]?[self programTitle]:[NSString stringWithFormat:@"SEANCE DE %@",[self date]];
+    return ![[self programTitle] isEqualTo:@""] ? [self programTitle] : [NSString stringWithFormat:@"SEANCE DE %@",[self date]];
 }
 
 /**
@@ -51,7 +52,7 @@
  *  @return A NSNumber object representing the event duration in minutes.
  */
 - (NSNumber*)duration{
-    return [NSNumber numberWithInt:60];
+    return [self calendarToCPL] != 0 ? [[self calendarToCPL] duration] : [NSNumber numberWithInt:60];
 }
 
 /**
@@ -67,7 +68,6 @@
  *  @return A NSDate object representing the event's start date.
  */
 - (NSDate*)scheduledDate{
-    NSLog(@"date : %@", [self date]);
     return [self date];
 }
 

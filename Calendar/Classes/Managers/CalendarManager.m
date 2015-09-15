@@ -45,15 +45,15 @@
     return [self getCalendarPlanningForWeek:[[NSDate date] dateByAddingDays:-10]];
 }
 
-//- (NSArrayController *) getCalendarPlanningForWeek:(NSDate *)date{
-//    NSLog(@"current number of Objects: %ld", [[calendarController arrangedObjects] count]);
-//    NSLog(@"preparing array controller for objects between: %@ and %@", [date dateYesterday], [date dateTomorrow]);
-//    [calendarController setFilterPredicate:[NSPredicate predicateWithFormat:@"(date > %@ AND date < %@)",[date dateYesterday], [date dateTomorrow]]];
-//    [calendarController rearrangeObjects];
-//    NSLog(@"number of Objects after filter: %ld", [[calendarController arrangedObjects] count]);
-//    
-//    return calendarController;
-//}
+- (NSArrayController *) getCalendarPlanningForWeek:(NSDate *)date{
+    NSLog(@"current number of Objects: %ld", [[calendarController arrangedObjects] count]);
+    NSLog(@"preparing array controller for objects between: %@ and %@", [date dateYesterday], [date dateTomorrow]);
+    [calendarController setFilterPredicate:[NSPredicate predicateWithFormat:@"(date > %@ AND date < %@)",[date dateYesterday], [date dateTomorrow]]];
+    [calendarController rearrangeObjects];
+    NSLog(@"number of Objects after filter: %ld", [[calendarController arrangedObjects] count]);
+    
+    return calendarController;
+}
 
 - (NSArrayController *) getCalendarPlanningForStartingDate:(NSDate *)beginDate andEndDate:(NSDate *)endDate{
     NSLog(@"current number of Objects: %ld", [[calendarController arrangedObjects] count]);

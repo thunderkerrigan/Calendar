@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="15A279b" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9048" systemVersion="15A282b" minimumToolsVersion="Xcode 7.0">
     <entity name="Calendar" representedClassName="Calendar" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="programTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="calendarToCPL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPLs" syncable="YES"/>
+        <relationship name="calendarToCPL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPLs" inverseName="cplToCalendar" inverseEntity="CPLs" syncable="YES"/>
     </entity>
     <entity name="CPLs" representedClassName="CPLs" syncable="YES">
         <attribute name="archive" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -43,6 +43,7 @@
         <attribute name="validationCheckSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="validationFiles" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="validationSize" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cplToCalendar" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calendar" inverseName="calendarToCPL" inverseEntity="Calendar" syncable="YES"/>
     </entity>
     <entity name="FirstParts" representedClassName="FirstParts" syncable="YES">
         <attribute name="compositionPlaylistID" optional="YES" attributeType="String" syncable="YES"/>
@@ -84,7 +85,7 @@
     </entity>
     <elements>
         <element name="Calendar" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="CPLs" positionX="-18" positionY="153" width="128" height="480"/>
+        <element name="CPLs" positionX="-18" positionY="153" width="128" height="495"/>
         <element name="FirstParts" positionX="27" positionY="180" width="128" height="210"/>
         <element name="Ingest" positionX="-54" positionY="63" width="128" height="210"/>
         <element name="KDMs" positionX="9" positionY="171" width="128" height="45"/>

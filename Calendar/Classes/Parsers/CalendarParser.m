@@ -8,6 +8,7 @@
 
 #import "CalendarParser.h"
 #import "CalendarProvider.h"
+#import "CPLsProvider.h"
 #import "Calendar+CoreDataProperties.h"
 
 @implementation CalendarParser
@@ -50,6 +51,7 @@
     [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     for (NSMutableArray *rowArray in array) {
         CalendarProvider *provider = [[CalendarProvider alloc] init];
+        CPLsProvider *cplProvider = [[CPLsProvider alloc] initWithContext:[provider managedObjectContext]];
         Calendar *calendar = [provider getOrCreateCalendarWithID:rowArray[0]];
         [calendar setIdCalendar:rowArray[0]];
         [calendar setDate:[df dateFromString:rowArray[1]]];
@@ -61,7 +63,11 @@
         [calendar setEventID:rowArray[7]];
         [calendar setFeatureID:rowArray[8]];
         [calendar setProgramTitle:rowArray[9]];
-        
+        CPLs *c = [cplProvider getOrCreateCPLsWithID:calendar.idCPL];
+        if (c != nil) {
+            [calendar setCalendarToCPL:c];
+            [c addCplToCalendarObject:calendar];
+        }
         [provider saveContext];
     }
     

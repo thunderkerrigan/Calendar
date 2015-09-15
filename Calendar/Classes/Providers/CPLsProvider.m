@@ -21,6 +21,22 @@
     return (CPLs *)[NSEntityDescription insertNewObjectForEntityForName:[CPLs MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
 }
 
+- (CPLs *)getCPLsWithID:(NSString *)stringID {
+    NSArray *fetchedObjects;
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:[CPLs MDMCoreDataAdditionsEntityName]  inManagedObjectContext: context];
+    [fetch setEntity:entityDescription];
+    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(idCPL MATCHES %@)",stringID]];
+    NSError * error = nil;
+    fetchedObjects = [context executeFetchRequest:fetch error:&error];
+    
+    if([fetchedObjects count] == 1)
+        return [fetchedObjects firstObject];
+    else
+        return nil;
+}
+
 - (CPLs *)getOrCreateCPLsWithID:(NSString *)stringID {
     NSArray *fetchedObjects;
     NSManagedObjectContext *context = [self managedObjectContext];

@@ -11,6 +11,7 @@
 
 @interface BaseProvider : NSObject
 
+- (instancetype)initWithContext:(NSManagedObjectContext *)context;
 - (NSManagedObjectContext *)managedObjectContext;
 - (BOOL)saveContext;
 - (NSArray *)getAll;

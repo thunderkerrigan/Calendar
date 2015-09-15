@@ -19,6 +19,14 @@
 @implementation BaseProvider
 
 
+-(instancetype)initWithContext:(NSManagedObjectContext *)context{
+    if (self) {
+        self = [super init];
+        backgroundObjectContext = context;
+    }
+    return self;
+}
+
 - (NSManagedObjectContext *)managedObjectContext
 {
     if (!backgroundObjectContext) {
