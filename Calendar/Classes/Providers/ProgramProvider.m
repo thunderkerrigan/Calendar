@@ -19,7 +19,9 @@
 
 #pragma mark - Create Methods
 
--(Programs *)createPrograms{
+-(Programs *)createProgramsWithID:(NSString *)stringID{
+    Programs *aProgram = [Programs MDMCoreDataAdditionsInsertNewObjectIntoContext:[self managedObjectContext]];
+    [aProgram setIdProgram:stringID];
     return [Programs MDMCoreDataAdditionsInsertNewObjectIntoContext:[self managedObjectContext]];
 }
 
@@ -36,7 +38,7 @@
     if([fetchedObjects count] == 1)
         return [fetchedObjects firstObject];    
     else
-        return [self createPrograms];
+        return [self createProgramsWithID:stringID];
 }
 
 #pragma mark - Get Methods

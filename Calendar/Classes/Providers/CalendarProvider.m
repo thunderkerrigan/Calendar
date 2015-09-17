@@ -11,8 +11,10 @@
 
 @implementation CalendarProvider
 
--(Calendar *)createCalendar{
-    return (Calendar *)[NSEntityDescription insertNewObjectForEntityForName:[Calendar MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
+-(Calendar *)createCalendarWithID:(NSString *)stringID{
+    Calendar *aCalendar = (Calendar *)[NSEntityDescription insertNewObjectForEntityForName:[Calendar MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
+    [aCalendar setIdCalendar:stringID];
+    return aCalendar;
 }
 
 - (Calendar *)getOrCreateCalendarWithID:(NSString *)stringID{
@@ -28,8 +30,8 @@
     if([fetchedObjects count] == 1)
         return [fetchedObjects firstObject];
     else
-        return [self createCalendar];
-
+        return [self createCalendarWithID:stringID];
+    
 }
 
 #pragma mark - Get Methods

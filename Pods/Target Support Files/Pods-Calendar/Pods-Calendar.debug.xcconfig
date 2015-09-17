@@ -1,0 +1,7 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/SOAPEngine"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = ${PODS_ROOT}/SOAPEngine/** $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/MDMCoreData" "${PODS_ROOT}/Headers/Public/NSDate+Calendar" "${PODS_ROOT}/Headers/Public/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/SOAPEngine" "${PODS_ROOT}/Headers/Public/SOAPEngine/SOAPEngineOSX" "${PODS_ROOT}/Headers/Public/mysql-connector-c"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/mysql-connector-c/Sources"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/MDMCoreData" -isystem "${PODS_ROOT}/Headers/Public/NSDate+Calendar" -isystem "${PODS_ROOT}/Headers/Public/ReactiveCocoa" -isystem "${PODS_ROOT}/Headers/Public/SOAPEngine" -isystem "${PODS_ROOT}/Headers/Public/SOAPEngine/SOAPEngineOSX" -isystem "${PODS_ROOT}/Headers/Public/mysql-connector-c"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"MDMCoreData" -l"NSDate+Calendar" -l"ReactiveCocoa" -l"c++" -l"mysqlclient" -l"xml2" -framework "Accounts" -framework "AppKit" -framework "CoreData" -framework "CoreServices" -framework "SOAPEngineOSX" -framework "Security" -framework "SystemConfiguration"
+PODS_ROOT = ${SRCROOT}/Pods

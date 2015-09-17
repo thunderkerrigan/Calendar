@@ -12,7 +12,7 @@
 
 @interface CPLsProvider : BaseProvider
 
--(CPLs *)createCPLs;
+- (CPLs *)createCPLsWithID:(NSString *)stringID;
 - (CPLs *)getOrCreateCPLsWithID:(NSString *)stringID;
 - (BOOL) deleteCPL:(CPLs *)cpl;
 - (BOOL) updateCPLs;

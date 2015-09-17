@@ -5,13 +5,13 @@
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="featureID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idCalendar" attributeType="String" syncable="YES"/>
-        <attribute name="idCPL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idSPL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isPrivate" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="lastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="programTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="calendarToCPL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPLs" inverseName="cplToCalendar" inverseEntity="CPLs" syncable="YES"/>
+        <relationship name="aCPL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPLs" inverseName="calendars" inverseEntity="CPLs" syncable="YES"/>
+        <relationship name="program" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Programs" inverseName="calendars" inverseEntity="Programs" syncable="YES"/>
     </entity>
     <entity name="CPLs" representedClassName="CPLs" syncable="YES">
         <attribute name="archive" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -43,7 +43,8 @@
         <attribute name="validationCheckSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="validationFiles" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="validationSize" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cplToCalendar" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calendar" inverseName="calendarToCPL" inverseEntity="Calendar" syncable="YES"/>
+        <relationship name="calendars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calendar" inverseName="aCPL" inverseEntity="Calendar" syncable="YES"/>
+        <relationship name="programs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CPLs" inverseName="programs" inverseEntity="CPLs" syncable="YES"/>
     </entity>
     <entity name="FirstParts" representedClassName="FirstParts" syncable="YES">
         <attribute name="compositionPlaylistID" optional="YES" attributeType="String" syncable="YES"/>
@@ -82,13 +83,15 @@
         <attribute name="template_identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="xml" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="aCPL" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPLs" syncable="YES"/>
+        <relationship name="calendars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Calendar" inverseName="program" inverseEntity="Calendar" syncable="YES"/>
     </entity>
     <elements>
         <element name="Calendar" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="CPLs" positionX="-18" positionY="153" width="128" height="495"/>
+        <element name="CPLs" positionX="-18" positionY="153" width="128" height="510"/>
         <element name="FirstParts" positionX="27" positionY="180" width="128" height="210"/>
         <element name="Ingest" positionX="-54" positionY="63" width="128" height="210"/>
         <element name="KDMs" positionX="9" positionY="171" width="128" height="45"/>
-        <element name="Programs" positionX="-36" positionY="126" width="128" height="180"/>
+        <element name="Programs" positionX="-36" positionY="126" width="128" height="210"/>
     </elements>
 </model>

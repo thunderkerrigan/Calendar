@@ -1,0 +1,58 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - MDMCoreData (1.5.0):
+    - MDMCoreData/MDMCoreDataCore (= 1.5.0)
+    - MDMCoreData/MDMFetchedResultsCollectionDataSource (= 1.5.0)
+    - MDMCoreData/MDMFetchedResultsTableDataSource (= 1.5.0)
+    - MDMCoreData/MDMPersistenceController (= 1.5.0)
+    - MDMCoreData/NSManagedObject+MDMCoreDataAdditions (= 1.5.0)
+  - MDMCoreData/MDMCoreDataCore (1.5.0)
+  - MDMCoreData/MDMPersistenceController (1.5.0):
+    - MDMCoreData/MDMCoreDataCore
+  - MDMCoreData/NSManagedObject+MDMCoreDataAdditions (1.5.0):
+    - MDMCoreData/MDMCoreDataCore
+  - mysql-connector-c (1.0.0)
+  - NSDate+Calendar (0.0.8)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SOAPEngine (1.21.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - MDMCoreData (~> 1.5)
+  - mysql-connector-c (~> 1.0)
+  - NSDate+Calendar (~> 0.0)
+  - ReactiveCocoa (~> 2.5)
+  - SOAPEngine (~> 1.21)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  MDMCoreData: 402f754cda90865026a209243f1667824e775649
+  mysql-connector-c: 6c1e5a80cf2f459f31578ad1cee95bd36c9363a2
+  NSDate+Calendar: 4aa9f6eb520bdbe7cfd82fbf6c7d35b9725c8188
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SOAPEngine: b8001ba3a2afd05b36fed9e3d961a8eaa54b076a
+
+COCOAPODS: 0.38.2

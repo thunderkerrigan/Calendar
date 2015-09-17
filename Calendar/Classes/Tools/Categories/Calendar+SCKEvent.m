@@ -37,7 +37,9 @@
  *  if any. It's not being used at the time.
  *  @return The patient object.
  */
-//- (id)patient;
+- (id)patient{
+    return nil;
+}
 
 /**
  *  This method or property should return the string that will be drawn inside of the

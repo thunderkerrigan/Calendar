@@ -13,7 +13,7 @@
 
 @interface CalendarProvider : BaseProvider
 
--(Calendar *)createCalendar;
+-(Calendar *)createCalendarWithID:(NSString *)stringID;
 - (Calendar *)getOrCreateCalendarWithID:(NSString *)stringID;
 - (BOOL) deleteCalendar:(Calendar *)calendar;
 - (BOOL) updateCalendars;

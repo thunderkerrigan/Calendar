@@ -52,7 +52,6 @@
     for (NSMutableArray *rowArray in array) {
         CPLsProvider *provider = [[CPLsProvider alloc] init];
         CPLs *cpl = [provider getOrCreateCPLsWithID:rowArray[0]];
-        [cpl setIdCPL:rowArray[0]];
         [cpl setTitle:rowArray[1]];
         [cpl setKind:[f numberFromString:rowArray[2]]];
         [cpl setDuration:[f numberFromString:rowArray[3]]];

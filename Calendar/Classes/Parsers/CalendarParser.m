@@ -53,7 +53,6 @@
         CalendarProvider *provider = [[CalendarProvider alloc] init];
         CPLsProvider *cplProvider = [[CPLsProvider alloc] initWithContext:[provider managedObjectContext]];
         Calendar *calendar = [provider getOrCreateCalendarWithID:rowArray[0]];
-        [calendar setIdCalendar:rowArray[0]];
         [calendar setDate:[df dateFromString:rowArray[1]]];
         [calendar setRoom:rowArray[2]];
         [calendar setIdCPL:rowArray[3]];

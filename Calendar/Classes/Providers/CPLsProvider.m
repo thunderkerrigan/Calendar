@@ -17,24 +17,10 @@
 
 #pragma mark - Create Methods
 
-- (CPLs *)createCPLs{
-    return (CPLs *)[NSEntityDescription insertNewObjectForEntityForName:[CPLs MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
-}
-
-- (CPLs *)getCPLsWithID:(NSString *)stringID {
-    NSArray *fetchedObjects;
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSFetchRequest *fetch = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:[CPLs MDMCoreDataAdditionsEntityName]  inManagedObjectContext: context];
-    [fetch setEntity:entityDescription];
-    [fetch setPredicate:[NSPredicate predicateWithFormat:@"(idCPL MATCHES %@)",stringID]];
-    NSError * error = nil;
-    fetchedObjects = [context executeFetchRequest:fetch error:&error];
-    
-    if([fetchedObjects count] == 1)
-        return [fetchedObjects firstObject];
-    else
-        return nil;
+- (CPLs *)createCPLsWithID:(NSString *)stringID{
+    CPLs *aCPLs = (CPLs *)[NSEntityDescription insertNewObjectForEntityForName:[CPLs MDMCoreDataAdditionsEntityName] inManagedObjectContext:[self managedObjectContext]];
+    [aCPLs setIdCPL:stringID];
+    return aCPLs;
 }
 
 - (CPLs *)getOrCreateCPLsWithID:(NSString *)stringID {
@@ -50,7 +36,7 @@
     if([fetchedObjects count] == 1)
         return [fetchedObjects firstObject];
     else
-        return [self createCPLs];
+        return [self createCPLsWithID:stringID];
 }
 
 #pragma mark - Get Methods

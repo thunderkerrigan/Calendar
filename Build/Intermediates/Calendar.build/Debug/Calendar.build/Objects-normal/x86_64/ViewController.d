@@ -1,0 +1,27 @@
+dependencies: \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/ViewControllers/ViewController.m \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/ViewControllers/ViewController.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKDayView.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKView.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKGridView.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKWeekView.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKEventView.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKEventRequest.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKEventManager.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKTextField.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKUnavailableTimeRange.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKEventHolder.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/SCKEvent.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/ScheduleKitDefinitions.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Headers/ScheduleKit.h \
+  /Users/joseph/Documents/Projects/Calendar/ScheduleKit.framework/Modules/module.modulemap \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Services/ProgramService.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Services/BaseService.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Services/CPLService.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Services/CalendarService.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/AppDelegate.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Managers/CalendarManager.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Providers/ProgramProvider.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Providers/BaseProvider.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Providers/CPLsProvider.h \
+  /Users/joseph/Documents/Projects/Calendar/Calendar/Classes/Providers/CalendarProvider.h
